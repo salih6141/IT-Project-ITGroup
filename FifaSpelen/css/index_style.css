@@ -1,5 +1,5 @@
 *{
-   background-color:  rgb(27, 27, 151);
+   background-color:  rgb(0, 0, 255);
     font-family: 'Roboto', sans-serif;
     color: white;
 }
@@ -21,4 +21,11 @@
 }
 .index_footer{
     height: 50%;
+}
+
+.container{
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 10%;
 }
