@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./settings.css">
+    <title>Document</title>
+</head>
+<header>
+    <div class="logo-container">
+        <img src="images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png"  alt="Klik om profiel te bekijken/bewerken">
+    </div>
+
+    <div class="nav-container" onclick="myFunction(this)">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+        <div class="bar-3"></div>
+        </div>
+    
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("flip-change");
+            }
+        </script>
+
+</header>
+
+<body>
+    <div>
+        <h1><strong>SETTINGS</strong> </h1> 
+    </div>
+
+<main class="main-container">
+    <div class="slidecontainer-volume">
+        <p>GAME VOLUME</p>
+        <input type="range" min="1" max="100" value="50">
+    </div>
+    
+    <div class="slidecontainer-verlichting">
+        <p>BRIGHTNESS</p>
+        <input type="range" min="1" max="100" value="50">
+    </div>
+</main>
+
+<foote id="footer">IT-Project -- Adil Ziani - Achraf Ahrirou - Salih Komut - Mamadou Barry --</footer>
+
+</body>
+</html>
