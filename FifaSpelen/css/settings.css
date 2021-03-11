@@ -12,6 +12,8 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto; 
+    background-color: lightgrey;
+    opacity: 1;
 }
 .logo-container {
         position: fixed;
@@ -19,6 +21,16 @@ h1 {
         top: 5px;
         width: 35px;
         height: 5px;
+}
+img{
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
+    margin-right: 100%;
+    position: right;
+    top: 8px;
+    right: 16px;
+
 }
 main {
     display: block;
