@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" type="text/css"> 
-    <title>Fifa</title>
+    <title>Spel</title>
+    <link rel="stylesheet" href="css/spel.css" type="text/css">
 </head>
 <header>
-    <h1>Klik eerst op de club en hierna op de league waartoe de club behoort.</h1>
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        
+        <div class="icon-container">
+            <img src="images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png"  alt="Klik om profiel te bekijken/bewerken">
+        </div>
+    
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+    <body>
+        <div>
+            <h1><p>In welke league speelt de club?<br>Selecteer de juiste league.</p></h1> 
+        </div>
+    </body>
 </header>
-<body>
-    <div class="container">
-        <div class="club-image"><1></div>
-        <div class="club-image"><2></div>
-        <div class="club-image"><3></div>
-        <div class="league-image"><1></div>
-        <div class="league-image"><2></div>
-        <div class="league-image"><3></div>
-    </div>
-    <div class="button">
-        <button>QUIT</button>
-    </div>
-</body>
-<footer>
-    <p>IT Group - Komut Salih , Ahrirou Achraf, Ziani Adil, Barry Mamadou</p>
-</footer>
 </html>
