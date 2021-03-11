@@ -8,7 +8,11 @@
 }
 
 .overzicht{
+<<<<<<< HEAD
     margin: 25% ;
+=======
+    margin: 50% ;
+>>>>>>> 838859f6b74c359e72140f86bef8b9bcf074b5a1
     margin-top: 20%;
     display: flex;
     flex-direction: row; 
