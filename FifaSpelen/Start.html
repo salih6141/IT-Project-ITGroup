@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Start.css">
     <title>Startpagina</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 100px;
+            grid-template-areas:
+            'header'
+            'main'
+            'footer';
+        }
+        header { grid-area: header; }
+        main { 
+            grid-area: main; 
+        }
+        footer {grid-area: footer; }
+    </style>
 </head>
-<header>
-    <h1>Fifa Spelen</h1>
-</header>
-<body>
-    <div>
-        <fieldset>
-            <button type="button"><a href="spel.html" target ="_blank">Press any button to start the game</a></button>
-            
-        </fieldset>
-    </div>
-</body>
+
+    <header class="header">
+        <h1>Fifa Spelen</h1>
+    </header>
+
+    <main>
+        <div class="spel-button">
+            <button type="button"><a href="spel.html" target ="_blank">Press this button to start the game</a></button>   
+        </div>
+    </main>
+
 <footer>
-    <p>IT Group - Komut Salih, Ahrirou Achraf, Ziani Adil, Barry Mamadou</p>
+    <p>IT Group | <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring</a>| Komut Salih - Ahrirou Achraf - Ziani Adil - Barry Mamadou</p>
 </footer>
 </html>
