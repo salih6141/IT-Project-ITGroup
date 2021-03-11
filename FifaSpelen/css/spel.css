@@ -1,7 +1,6 @@
 *{
     background-color:white;
      font-family: 'Roboto', sans-serif;
-     color: white;
  }
 
  .container{
@@ -16,6 +15,27 @@
      width: 35px;
      height: 5px;
  }
+
+ h1 {
+    width: 500px;
+    height: 220px;
+    color: blue;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid blue;
+    display: block;
+    border-radius: 20%;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 200%;
+    background-color: lightgrey;
+}
+
+p{
+    position: relative;
+    text-align: center;
+    background-color: lightgrey;
+}
 
  img{
      width: 100%;
