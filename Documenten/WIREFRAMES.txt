@@ -4,3 +4,5 @@ https://wireframe.cc/sALrCp ==> Overzicht pagina Mobiel (Staand)
 https://wireframe.cc/hNamr6 ==> startpagina mobiel
 https://wireframe.cc/nsw62n ==> spelpagina mobiel 
 https://wireframe.cc/pqC9th ==> Eindpagina mobiel
+
+https://www.figma.com/file/KrPmR2eTYU1EieKGdnlzWB/Untitled?node-id=0%3A1 ==> nieuwe wireframes
