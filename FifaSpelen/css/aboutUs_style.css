@@ -63,11 +63,8 @@ img{
     margin: 25px;
 }
 
-.overzicht{
-    grid-area: 'main';
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
+.text{
+    margin: 10px;
+    font-size: 20px;
+
 }
