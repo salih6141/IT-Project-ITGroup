@@ -1,16 +1,18 @@
 *{
-    background-color:white;
+    background-color: black;
      font-family: 'Roboto', sans-serif;
  }
 
  .container{
      display: inline-block;
      cursor: pointer;
+     border-radius: 100%;
  }
 
  img{
      max-width: 100%;
      height: auto;
+     border-radius: 50%;
  }
 
  .icon-container{
@@ -37,36 +39,38 @@
      position: right;
      top: 8px;
      right: 16px;
-
+     border-radius: 50%;
+ }
+ .user-image:hover{
+    box-shadow: 0px 0px 3px 3px whitesmoke;
  }
 
  h1 {
     position: relative;
     width: auto;
     height: auto;
-    color: blue;
+    color: goldenrod;
     box-sizing: border-box;
     text-align: center;
-    border: 1px solid blue;
+    border: 2px solid goldenrod;
     display: block;
     border-radius: 20%;
     margin-left: auto;
     margin-right: auto; 
     font-size: 150%;
-    background-color: lightgrey;
+    background-color:black;
 }
 
 p{
     position: relative;
     text-align: center;
-    background-color: lightgrey;
 }
 
  .bar1, .bar2, .bar3{
      position: relative;
      width: 35px;
      height: 5px;
-     background-color: #333;
+     background-color:goldenrod;
      margin: 6px 0;
      transition: 0.5s;
  }
@@ -99,6 +103,10 @@ p{
       padding: auto;
     }
 
+ .Limage{
+     border-radius: 50%;
+ }
+
   .club{
       position: relative;
       margin: auto;
@@ -112,7 +120,60 @@ p{
   }
 
   .btn-endgame{
-      display: flex;
-      font-size: 25px;
-      margin: auto;
+    display: flex;
+    margin: auto;
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
   }
+
+  .btn-endgame span{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+  }
+
+  .btn-endgame:hover {
+    color: black;
+}
+
+.btn-endgame:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.btn-endgame span:nth-child(1) {
+    --n: 1;
+}
+
+.btn-endgame span:nth-child(2) {
+    --n: 2;
+}
+
+.btn-endgame span:nth-child(3) {
+    --n: 3;
+}
+
+.btn-endgame span:nth-child(4) {
+    --n: 4;
+}
