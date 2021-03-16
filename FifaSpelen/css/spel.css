@@ -8,6 +8,11 @@
      cursor: pointer;
  }
 
+ img{
+     max-width: 100%;
+     height: auto;
+ }
+
  .icon-container{
     position: fixed;
     right: 10px;
