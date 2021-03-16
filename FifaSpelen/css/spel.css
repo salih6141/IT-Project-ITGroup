@@ -9,14 +9,34 @@
  }
 
  .icon-container{
-     position: fixed;
-     right: 10px;
-     top: 5px;
-     width: 35px;
-     height: 5px;
+    position: fixed;
+    right: 10px;
+    top: 5px;
+    width: 35px;
+    height: 5px;
+ }
+
+ .container-game{
+     position: relative;
+     width: auto;
+     display: grid;
+ }
+
+
+ .user-image{
+    position: relative;
+     width: 100%;
+     height: auto;
+     margin-left: 0%;
+     margin-right: 100%;
+     position: right;
+     top: 8px;
+     right: 16px;
+
  }
 
  h1 {
+    position: relative;
     width: auto;
     height: auto;
     color: blue;
@@ -37,18 +57,6 @@ p{
     background-color: lightgrey;
 }
 
- img{
-    position: relative;
-     width: 100%;
-     height: auto;
-     margin-left: 0%;
-     margin-right: 100%;
-     position: right;
-     top: 8px;
-     right: 16px;
-
- }
-
  .bar1, .bar2, .bar3{
      position: relative;
      width: 35px;
@@ -68,4 +76,38 @@ p{
   .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .flex-grid-leagues{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+  }
+
+  .league{
+      position: relative;
+      width: fit-content;
+      height: auto;
+      padding: auto;
+    }
+
+  .club{
+      position: relative;
+      margin: auto;
+      width: fit-content;
+      height: auto;
+      
+  }
+
+  .button-quit{
+      position: relative;
+  }
+
+  .btn-endgame{
+      display: flex;
+      font-size: 25px;
+      margin: auto;
   }
