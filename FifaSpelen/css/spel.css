@@ -17,8 +17,8 @@
  }
 
  h1 {
-    width: 500px;
-    height: 220px;
+    width: auto;
+    height: auto;
     color: blue;
     box-sizing: border-box;
     text-align: center;
@@ -27,7 +27,7 @@
     border-radius: 20%;
     margin-left: auto;
     margin-right: auto; 
-    font-size: 200%;
+    font-size: 150%;
     background-color: lightgrey;
 }
 
@@ -38,6 +38,7 @@ p{
 }
 
  img{
+    position: relative;
      width: 100%;
      height: auto;
      margin-left: 0%;
@@ -49,6 +50,7 @@ p{
  }
 
  .bar1, .bar2, .bar3{
+     position: relative;
      width: 35px;
      height: 5px;
      background-color: #333;
