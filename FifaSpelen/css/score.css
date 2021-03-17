@@ -10,39 +10,60 @@
  }
 
  img{
-     max-width: 100%;
-     height: auto;
-     border-radius: 50%;
- }
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
 
- .icon-container{
-    position: fixed;
-    right: 10px;
-    top: 5px;
+.icon-container{
+   position: fixed;
+   right: 10px;
+   top: 5px;
+   width: 35px;
+   height: 5px;
+}
+
+.container-game{
+    position: relative;
+    width: auto;
+    display: grid;
+}
+
+
+.user-image{
+   position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
+    margin-right: 100%;
+    position: right;
+    top: 8px;
+    right: 16px;
+    border-radius: 50%;
+}
+.user-image:hover{
+   box-shadow: 0px 0px 3px 3px whitesmoke;
+}
+
+.bar1, .bar2, .bar3{
+    position: relative;
     width: 35px;
     height: 5px;
- }
+    background-color:goldenrod;
+    margin: 6px 0;
+    transition: 0.5s;
+}
 
- .container-game{
-     position: relative;
-     width: auto;
-     display: grid;
+.change .bar1 {
+   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+   transform: rotate(-45deg) translate(-9px, 6px);
  }
-
-
- .user-image{
-    position: relative;
-     width: 100%;
-     height: auto;
-     margin-left: 0%;
-     margin-right: 100%;
-     position: right;
-     top: 8px;
-     right: 16px;
-     border-radius: 50%;
- }
- .user-image:hover{
-    box-shadow: 0px 0px 3px 3px whitesmoke;
+ 
+ .change .bar2 {opacity: 0;}
+ 
+ .change .bar3 {
+   -webkit-transform: rotate(45deg) translate(-8px, -8px);
+   transform: rotate(45deg) translate(-8px, -8px);
  }
 
  h1 {
@@ -66,54 +87,11 @@ p{
     text-align: center;
 }
 
- .bar1, .bar2, .bar3{
-     position: relative;
-     width: 35px;
-     height: 5px;
-     background-color:goldenrod;
-     margin: 6px 0;
-     transition: 0.5s;
- }
-
- .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-
-  .flex-grid-leagues{
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      margin: auto;
-  }
-
-  .league{
-      position: relative;
-      width: fit-content;
-      height: auto;
-    }
-
-  .club{
-      position: relative;
-      margin: auto;
-      width: auto;
-      height: auto;
-      
-      
-  }
-
-  .btn-endgame{
-    display: flex;
-    margin: auto;
+.btn-endgame{
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    right: 45%;
     --c: goldenrod;
     color: var(--c);
     font-size: 16px;
@@ -127,7 +105,6 @@ p{
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 3em;
-    position: relative;
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
@@ -170,3 +147,4 @@ p{
 .btn-endgame span:nth-child(4) {
     --n: 4;
 }
+

@@ -2,8 +2,9 @@
 <html lang="NL-be">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable-no">
+    <meta name="HandheldFriendly" content="true"> 
     <title>Spel</title>
     <link rel="stylesheet" href="css/spel.css" type="text/css">
 </head>
@@ -14,20 +15,29 @@
             <div class="bar3"></div>
         </div>
 
-        
+      
         <div class="icon-container">
-            <img src="images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png"  alt="Klik om profiel te bekijken/bewerken">
+            <img class="user-image" src="images/user-member-avatar-face-profile-icon-vector-22965342-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
         </div>
-    
+
         <script>
             function myFunction(x) {
                 x.classList.toggle("change");
             }
         </script>
+    </header>
     <body>
-        <div>
+        <div class="container-game">
             <h1><p>In welke league speelt de club?<br>Selecteer de juiste league.</p></h1> 
+            <div class="club">
+                <img src="images/league_icon-removebg-preview.png">
+            </div>
+            <div class="flex-grid-leagues">
+                <div class="league"><img class="Limage" src="images/league_icon-removebg-preview.png"></div>
+                <div class="league"><img class="Limage" src="images/league_icon-removebg-preview.png"></div>
+                <div class="league"><img class="Limage" src="images/league_icon-removebg-preview.png"></div>
+            </div>
+            <button class="btn-endgame">end game<span></span><span></span><span></span><span></span></button>
         </div>
     </body>
-</header>
 </html>
