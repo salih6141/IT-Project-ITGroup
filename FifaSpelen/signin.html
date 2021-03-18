@@ -5,35 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/FifaSpelen/css/signin.css">
     <title>sign-in</title>
 </head>
+<header>
+    <div class=" header-containers">
+        <div>
+            <h1>Sign In</h1>
+        </div>
 
-<body class="container">
+</header>
 
-    <div class="header">
-<h2>Sign In</h2>
-    </div>
-    <div class="body">
-        <form method="post" action="#">
-            <fieldset>
+<body>
+
+    <form method="post" action="#">
+        <fieldset>
+            <div class="body-container">
+
                 <div class="username">
                     <label for="username"></label>
-                    <input type="text" id="username" class="username"  autofocus required placeholder="username or email">
+                    <input type="text" id="username" class="username" autofocus required
+                        placeholder="username or email">
                 </div>
 
                 <div class="password">
                     <label for="password"></label>
                     <input type="password" id="password" class="password" required placeholder="password">
                 </div>
-                <a href="#">Password vergeten?</a>
-                </fieldset>
+                <a class="vgpasswordlink" href="#">Password vergeten?</a>
 
-    </div>
-    <footer>
-        <button>Sign In</button>
-    </footer>
+                <div class="button">
+                    <button type="submit" name="uc" value="send">Sign In</button>
+                </div>
+
+
+
+            </div>
+        </fieldset>
+
 
 </body>
+<footer>
+    <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring
+    </a>
+</footer>
 
 </html>
