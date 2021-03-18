@@ -23,7 +23,7 @@
    height: 5px;
 }
 
-.container-game{
+.container-score{
     position: relative;
     width: auto;
     display: grid;
@@ -66,7 +66,7 @@
    transform: rotate(45deg) translate(-8px, -8px);
  }
 
- h1 {
+ h1 , h2{
     position: relative;
     width: auto;
     height: auto;
@@ -82,16 +82,25 @@
     background-color:black;
 }
 
+h2 {
+    color: white;
+    border: 5px solid goldenrod;
+    background-color: goldenrod;
+    width: 500px;
+    height: 300px;
+    border-radius: 5%;
+    text-align: left;
+}
+
 p{
-    position: relative;
+    background-color: goldenrod;
     text-align: center;
 }
 
-.btn-endgame{
-    position: absolute;
-    bottom: 0px;
-    left: 45%;
-    right: 45%;
+
+.btn-home{
+    display: flex;
+    margin: auto;
     --c: goldenrod;
     color: var(--c);
     font-size: 16px;
@@ -105,13 +114,13 @@ p{
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 3em;
+    position: relative;
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
-    
   }
 
-  .btn-endgame span{
+  .btn-home span{
     position: absolute;
     width: 25%;
     height: 100%;
@@ -124,27 +133,27 @@ p{
     z-index: -1;
   }
 
-  .btn-endgame:hover {
+  .btn-home:hover {
     color: black;
 }
 
-.btn-endgame:hover span {
+.btn-home:hover span {
     transform: translateY(0) scale(2);
 }
 
-.btn-endgame span:nth-child(1) {
+.btn-home span:nth-child(1) {
     --n: 1;
 }
 
-.btn-endgame span:nth-child(2) {
+.btn-home span:nth-child(2) {
     --n: 2;
 }
 
-.btn-endgame span:nth-child(3) {
+.btn-home span:nth-child(3) {
     --n: 3;
 }
 
-.btn-endgame span:nth-child(4) {
+.btn-home span:nth-child(4) {
     --n: 4;
 }
 
