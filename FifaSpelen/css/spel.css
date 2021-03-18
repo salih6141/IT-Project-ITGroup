@@ -113,6 +113,7 @@ p{
 
   .btn-endgame{
     display: flex;
+    position: relative;
     margin: auto;
     --c: goldenrod;
     color: var(--c);
@@ -127,7 +128,6 @@ p{
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 3em;
-    position: relative;
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
