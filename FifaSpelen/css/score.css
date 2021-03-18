@@ -1,5 +1,5 @@
 *{
-    background-color: black;
+     background-color: black;
      font-family: 'Roboto', sans-serif;
  }
 
@@ -58,7 +58,7 @@
     margin-left: auto;
     margin-right: auto; 
     font-size: 150%;
-    background-color:black;
+    background: black;
 }
 
 h2 {
@@ -113,7 +113,7 @@ p{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color:black;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
