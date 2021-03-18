@@ -83,11 +83,12 @@
 }
 
 h2 {
+    position: relative;
     color: white;
     border: 5px solid goldenrod;
     background-color: goldenrod;
-    width: 500px;
-    height: 300px;
+    width: 400px;
+    height: auto;
     border-radius: 5%;
     text-align: left;
 }
