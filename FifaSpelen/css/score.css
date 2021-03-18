@@ -23,7 +23,7 @@
    height: 5px;
 }
 
-.container-game{
+.container-score{
     position: relative;
     width: auto;
     display: grid;
@@ -45,6 +45,112 @@
    box-shadow: 0px 0px 3px 3px whitesmoke;
 }
 
+ h1 , h2{
+    position: relative;
+    width: auto;
+    height: auto;
+    color: goldenrod;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid goldenrod;
+    display: block;
+    border-radius: 20%;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 150%;
+    background-color:black;
+}
+
+h2 {
+    position: relative;
+    color: white;
+    border: 5px solid goldenrod;
+    background-color: goldenrod;
+    width: 400px;
+    height: auto;
+    border-radius: 5%;
+    text-align: left;
+}
+
+p{
+    background-color: goldenrod;
+    text-align: center;
+}
+
+
+.btn-home{
+    display: flex;
+    margin: auto;
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: fit-content;
+    height: fit-content;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  .btn-home:hover {
+    color: black;
+    background-color: goldenrod;
+}
+
+.sidenav {
+    position: absolute;
+    height: 100%;
+    color: goldenrod;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    position: absolute;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  #about{
+      border-top: 1px solid goldenrod;
+      bottom: 100px;
+  }
+
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    color: goldenrod;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+
+  
+/*
 .bar1, .bar2, .bar3{
     position: relative;
     width: 35px;
@@ -65,86 +171,5 @@
    -webkit-transform: rotate(45deg) translate(-8px, -8px);
    transform: rotate(45deg) translate(-8px, -8px);
  }
-
- h1 {
-    position: relative;
-    width: auto;
-    height: auto;
-    color: goldenrod;
-    box-sizing: border-box;
-    text-align: center;
-    border: 2px solid goldenrod;
-    display: block;
-    border-radius: 20%;
-    margin-left: auto;
-    margin-right: auto; 
-    font-size: 150%;
-    background-color:black;
-}
-
-p{
-    position: relative;
-    text-align: center;
-}
-
-.btn-endgame{
-    position: absolute;
-    bottom: 0px;
-    left: 45%;
-    right: 45%;
-    --c: goldenrod;
-    color: var(--c);
-    font-size: 16px;
-    border: 0.3em solid var(--c);
-    border-radius: 0.5em;
-    width: fit-content;
-    height: fit-content;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: sans-serif;
-    letter-spacing: 0.1em;
-    text-align: center;
-    line-height: 3em;
-    overflow: hidden;
-    z-index: 1;
-    transition: 0.5s;
-    
-  }
-
-  .btn-endgame span{
-    position: absolute;
-    width: 25%;
-    height: 100%;
-    background-color: var(--c);
-    transform: translateY(150%);
-    border-radius: 50%;
-    left: calc((var(--n) - 1) * 25%);
-    transition: 0.5s;
-    transition-delay: calc((var(--n) - 1) * 0.1s);
-    z-index: -1;
-  }
-
-  .btn-endgame:hover {
-    color: black;
-}
-
-.btn-endgame:hover span {
-    transform: translateY(0) scale(2);
-}
-
-.btn-endgame span:nth-child(1) {
-    --n: 1;
-}
-
-.btn-endgame span:nth-child(2) {
-    --n: 2;
-}
-
-.btn-endgame span:nth-child(3) {
-    --n: 3;
-}
-
-.btn-endgame span:nth-child(4) {
-    --n: 4;
-}
-
+ */
+ 

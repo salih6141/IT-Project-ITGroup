@@ -66,27 +66,6 @@ p{
     text-align: center;
 }
 
- .bar1, .bar2, .bar3{
-     position: relative;
-     width: 35px;
-     height: 5px;
-     background-color:goldenrod;
-     margin: 6px 0;
-     transition: 0.5s;
- }
-
- .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-
   .flex-grid-leagues{
       position: relative;
       display: flex;
@@ -107,8 +86,6 @@ p{
       margin: auto;
       width: auto;
       height: auto;
-      
-      
   }
 
   .btn-endgame{
@@ -134,39 +111,76 @@ p{
     
   }
 
-  .btn-endgame span{
-    position: absolute;
-    width: 25%;
-    height: 100%;
-    background-color: var(--c);
-    transform: translateY(150%);
-    border-radius: 50%;
-    left: calc((var(--n) - 1) * 25%);
-    transition: 0.5s;
-    transition-delay: calc((var(--n) - 1) * 0.1s);
-    z-index: -1;
-  }
-
   .btn-endgame:hover {
     color: black;
+    background-color: goldenrod;
 }
 
-.btn-endgame:hover span {
-    transform: translateY(0) scale(2);
-}
+.sidenav {
+    position: absolute;
+    height: 100%;
+    color: goldenrod;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    position: absolute;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
 
-.btn-endgame span:nth-child(1) {
-    --n: 1;
-}
+  #about{
+      border-top: 1px solid goldenrod;
+      bottom: 100px;
+  }
 
-.btn-endgame span:nth-child(2) {
-    --n: 2;
-}
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    color: goldenrod;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 
-.btn-endgame span:nth-child(3) {
-    --n: 3;
-}
+/*
+.bar1, .bar2, .bar3{
+     position: relative;
+     width: 35px;
+     height: 5px;
+     background-color:goldenrod;
+     margin: 6px 0;
+     transition: 0.5s;
+ }
 
-.btn-endgame span:nth-child(4) {
-    --n: 4;
-}
+ .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  */
+  

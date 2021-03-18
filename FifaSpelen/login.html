@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/FifaSpelen/css/login.css">
     <title>Log-in</title>
 </head>
-
-<body class="container">
-
+<header>
     <div class="header">
-<h2>Vul u gegevens in om u te registreren</h2>
+        <h1>Vul u gegevens in om u te registreren</h1>
     </div>
-    <div class="body">
-        <form method="post" action="#">
-            <fieldset>
+</header>
+
+<body>
+    <form method="post" action="#">
+        <fieldset>
+            <div class="container">
                 <div class="name">
                     <label for="name"></label>
-                    <input type="text" id="name" class="name"  autofocus required placeholder="Name">
+                    <input type="text" id="name" class="name" autofocus required placeholder="Name">
                 </div>
 
                 <div class="lastname">
@@ -35,13 +36,22 @@
                 <div class="password">
                     <label for="password"></label>
                     <input type="password" id="password" class="password" required placeholder="password">
-            </fieldset>
+                </div>
 
-    </div>
-    <footer>
-        <button>registreren</button>
-    </footer>
+                <div class="button">
+                    <button type="submit" name="uc" value="send">Log In</button>
+                </div>
+            </div>
+
+        </fieldset>
+
+        </div>
+
 
 </body>
+<footer>
+    <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring
+    </a>
+</footer>
 
 </html>
