@@ -1,6 +1,6 @@
 @font-face{
-  src: url(/font/EASPORTS15.ttf);
-  font-family: ea-sports;
+  src: url(/fonts/EASPORTS15.ttf);
+  font-family:ea-sports;
 }
 
 *{
@@ -62,41 +62,38 @@
     position: relative;
     width: auto;
     height: auto;
-    color: goldenrod;
-    box-sizing: border-box;
+    color: white;
     text-align: center;
-    border: 2px solid goldenrod;
+    padding: 5px;
     display: block;
-    border-radius: 20%;
     margin-left: auto;
     margin-right: auto; 
-    font-size: 150%;
-    background: black;
-    background-image: url("../images/background.jpeg");
+    font-size: 200%;
 }
 
 h2 {
     position: relative;
-    color: black;
-    border: 5px solid goldenrod;
-    background-color: goldenrod;
+    padding: 10px;
+    color: white;
+    font-size: 150%;
     width: 400px;
     height: auto;
     border-radius: 5%;
     text-align: left;
+    background-color: rgb(221, 87, 87,0.3);
 }
 
 p{
-    background-color: goldenrod;
+   
+    color: white;
     text-align: center;
 }
 
 
 .btn-home{
+  background-color: rgb(221, 87, 87,0.3);
     display: flex;
-    background-image: url("../images/background.jpeg");
     margin: auto;
-    --c: goldenrod;
     color: var(--c);
     font-size: 16px;
     border: 0.3em solid var(--c);
@@ -122,13 +119,12 @@ p{
 .sidenav {
     position: absolute;
     height: 100%;
-    color: goldenrod;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color:black;
+    background-color: rgb(217, 165, 32,0.5);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -139,14 +135,15 @@ p{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
   }
 
   #about{
-      border-top: 1px solid goldenrod;
+      border-top: 1px solid white;
       bottom: 100px;
+      color: white;
   }
 
   

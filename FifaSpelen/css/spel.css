@@ -1,6 +1,11 @@
+@font-face{
+  src: url(/fonts/EASPORTS15.ttf);
+  font-family:ea-sports;
+}
+
 *{
-    
-     font-family: 'Roboto', sans-serif;
+    font-family: ea-sports;
+    color: white;
  }
 
  body {
@@ -56,16 +61,12 @@
     position: relative;
     width: auto;
     height: auto;
-    color: goldenrod;
-    box-sizing: border-box;
+    color: white;
     text-align: center;
-    border: 2px solid goldenrod;
     display: block;
-    border-radius: 20%;
     margin-left: auto;
     margin-right: auto; 
     font-size: 150%;
-    background-color:black;
 }
 
 p{
@@ -99,7 +100,7 @@ p{
     display: flex;
     position: relative;
     margin: auto;
-    --c: goldenrod;
+    background-color: rgb(221, 87,87,0.3);
     color: var(--c);
     font-size: 16px;
     border: 0.3em solid var(--c);
@@ -124,32 +125,32 @@ p{
 }
 
 .sidenav {
-    position: absolute;
-    height: 100%;
-    color: goldenrod;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: black;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidenav a {
-    position: absolute;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
+  position: absolute;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(217, 165, 32,0.5);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  position: absolute;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
 
   #about{
-      border-top: 1px solid goldenrod;
+      border-top: 1px solid white;
       bottom: 100px;
   }
 
