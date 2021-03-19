@@ -1,8 +1,15 @@
 *{
-    background-color: black;
+    
      font-family: 'Roboto', sans-serif;
  }
 
+ body {
+  background-image: url("../images/background.jpeg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
  .container{
      display: inline-block;
      cursor: pointer;
