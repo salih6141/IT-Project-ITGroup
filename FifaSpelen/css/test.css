@@ -1,0 +1,25 @@
+html, body {
+    width: 100vh;
+}
+.modal-button {
+    color: yellow;
+    background-color: #141414;
+}
+body .modal-content {   
+    width: 750px;  
+    height: 400px;   
+}
+.slidecontainer-volume, .slidecontainer-verlichting {
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    width: 200px;
+}
+.modal-body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -55px;
+    font-size: 20px;
+}
