@@ -1,16 +1,32 @@
+@font-face{
+    src: url(/fonts/EASPORTS15.ttf);
+    font-family: ea-sports;
+}
+
+*{
+    font-family: ea-sports;
+    color: white;
+    
+}
 
 body{
+    height: 100%;
+    background-image: url(../images/background.jpeg);
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-position: center;
     display: grid;
     grid-template-rows: 
     "head head head"
     "header header "
      "main main main";  
-    
 }
 
 
+/* navigatie  */
 nav{
     grid-area: 'head';
+    height: 25px;
 }
 .container{
     display: inline-block;
@@ -39,7 +55,7 @@ img{
 .bar1, .bar2, .bar3{
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: rgb(255, 255, 255);
     margin: 6px 0;
     transition: 0.5s;
 }
@@ -56,18 +72,51 @@ img{
    transform: rotate(45deg) translate(-8px, -8px);
  }
 
+/* body */
 .hoofdtitel{
-    grid-area: 'header';
-    background-color: grey;
-    text-align: center;
-    margin: 25px;
+    grid-area: 'header'; 
 }
 
-.overzicht{
+.titel_index{
+    text-align: center;
+    font-size: 50px; 
+}
+/* main */
+.overzicht{  
+   width: auto;
+   height: auto;
+    padding: 10%;
     grid-area: 'main';
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
+    justify-content: space-evenly;
+    gap: 30px;
 }
+.activiteiten{
+    background-color: rgb(221, 87, 87);
+    border-radius: 5px;
+    font-size: 40px;
+}
+@media screen and (max-width: 600px){
+   body{
+       height: 100%;
+   }
+   .activiteiten{
+       font-size: 12PX;
+   }
+}
+footer{
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: yellow;
+    font-size: 12px;
+    padding-top: 100px;
+}
+
+
+
+    
+

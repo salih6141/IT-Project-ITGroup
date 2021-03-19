@@ -1,20 +1,32 @@
-
+@font-face{
+    src: url(/fonts/EASPORTS15.ttf);
+    font-family: ea-sports;
+}
+*{
+    font-family: ea-sports; 
+    color: white;
+}
 body{
+    height: 100vh;
+    background-image: url(/images/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     grid-template-rows: 
     "head head head"
     "header header "
      "main main main";  
-    
 }
 
 
 nav{
     grid-area: 'head';
+    position: fixed;
 }
 .container{
     display: inline-block;
     cursor: pointer;
+    position: fixed;
 }
 
 .icon-container{
@@ -23,6 +35,7 @@ nav{
     top: 5px;
     width: 35px;
     height: 5px;
+    
 }
 
 img{
@@ -39,9 +52,10 @@ img{
 .bar1, .bar2, .bar3{
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: rgb(255, 255, 255);
     margin: 6px 0;
     transition: 0.5s;
+    
 }
 
 .change .bar1 {
@@ -55,16 +69,47 @@ img{
    -webkit-transform: rotate(45deg) translate(-8px, -8px);
    transform: rotate(45deg) translate(-8px, -8px);
  }
+ /* titel */
 
 .hoofdtitel{
+    margin-top: ;
     grid-area: 'header';
-    background-color: grey;
     text-align: center;
-    margin: 25px;
+    font-size: 30px;
+    
 }
 
 .text{
-    margin: 10px;
+    margin: 3%;
+    background-color: rgb(221, 87, 87,0.3);
+    padding: 5%;
     font-size: 20px;
-
 }
+@media screen and (max-width: 600px){
+    body{
+        height: 100vh;
+        overflow: auto;
+    }
+    .text{
+        font-size: 12px;
+    }
+    footer{
+    
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: yellow;
+        font-size: 12px;
+        /* padding-top: 100px; */
+    }
+}
+footer{
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: yellow;
+    font-size: 15px;
+    padding-top: 100px;
+}
+
