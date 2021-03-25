@@ -1,11 +1,11 @@
-@font-face{
+/* @font-face{
     src: url(/fonts/EASPORTS15.ttf);
     font-family: ea-sports;
 }
 *{
     font-family: ea-sports; 
     color: white;
-}
+} */
 body{
     height: 100vh;
     background-image: url(/images/background.jpeg);
@@ -19,7 +19,7 @@ body{
 }
 
 
-nav{
+/* nav{
     grid-area: 'head';
     position: fixed;
 }
@@ -68,7 +68,7 @@ img{
  .change .bar3 {
    -webkit-transform: rotate(45deg) translate(-8px, -8px);
    transform: rotate(45deg) translate(-8px, -8px);
- }
+ } */
  /* titel */
 
 .hoofdtitel{

@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="HandheldFriendly" content="true">
     <link rel="stylesheet" href="/css/index_style.css">
+    <link rel="stylesheet" href="/css/root.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <header>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="settings.html">Settings</a>
+        <a href="settings.html" onclick="closeNav()" id="modalLink">Settings</a>
         <a id="about" href="about_page.html">About us</a>
       </div>
+    </div>
     
       <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776</span>
       
@@ -27,13 +29,10 @@
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
-      </script>   
-        <div class="icon-container">
-            <img class="user-image" src="images/user-member-avatar-face-profile-icon-vector-22965342-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
-        </div>
-</div>    
-    <div class="titeloverzicht">
-    <h1 class="titel_index">Activiteiten overzicht</h1>
+      </script>
+ 
+    <div class="icon-container">
+        <img class="user-image" src="./images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
     </div>
 </header>
 <body class="index_body">
