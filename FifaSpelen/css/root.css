@@ -45,7 +45,7 @@
   
     
     .sidenav a:hover {
-      color: black;
+      color: rgb(221, 87,87);
     }
     
     .closebtn {
@@ -74,14 +74,12 @@
         justify-content: row;
       }
       #about{
-  
         position: absolute;
         text-decoration: none;
         top: 0;
         left: 100px;
         margin-left: auto;
         margin-right: auto;
-      
       }
       #home{
         position: absolute;
@@ -93,7 +91,6 @@
         top: 0;
         left: 230px;
       }
-      
       .sidenav .closebtn{
         display: none;
       }
@@ -101,4 +98,3 @@
        box-shadow:grey 0px 2px 5px 2px;
       }
     }
-  

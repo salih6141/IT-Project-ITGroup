@@ -119,6 +119,7 @@ h2 {
     background-color: goldenrod;
 }
 
+/*navigatie*/
 .sidenav {
   position: absolute;
   height: 100%;
@@ -154,7 +155,7 @@ h2 {
 
   
   .sidenav a:hover {
-    color: black;
+    color: rgb(221, 87,87);
   }
   
   .closebtn {
@@ -183,14 +184,12 @@ h2 {
       justify-content: row;
     }
     #about{
-
       position: absolute;
       text-decoration: none;
       top: 0;
       left: 100px;
       margin-left: auto;
       margin-right: auto;
-    
     }
     #home{
       position: absolute;
@@ -202,7 +201,6 @@ h2 {
       top: 0;
       left: 230px;
     }
-    
     .sidenav .closebtn{
       display: none;
     }
