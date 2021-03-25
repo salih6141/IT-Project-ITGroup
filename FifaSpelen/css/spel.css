@@ -152,15 +152,20 @@ p{
   display: block;
   transition: 0.3s;
 }
+
+
 #home {
     top: 20px;
 }
+
   #about{
       text-decoration-line: overline;
       bottom: 100px;
   }
+
+  
   .sidenav a:hover {
-    color: black;
+    color: rgb(221, 87,87);
   }
   
   .closebtn {
@@ -189,14 +194,12 @@ p{
       justify-content: row;
     }
     #about{
-
       position: absolute;
       text-decoration: none;
       top: 0;
       left: 100px;
       margin-left: auto;
       margin-right: auto;
-    
     }
     #home{
       position: absolute;
@@ -208,7 +211,6 @@ p{
       top: 0;
       left: 230px;
     }
-    
     .sidenav .closebtn{
       display: none;
     }
