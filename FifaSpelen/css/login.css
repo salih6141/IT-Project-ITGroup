@@ -3,7 +3,7 @@ html {
     background-color: #141414;
     height: 100%;
     width: 100%;
-    background-image: url(/FifaSpelen/images/background.jpeg);
+    background-image: url(/images/background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -68,8 +68,7 @@ fieldset {
     width: 100%;
     display: grid;
     grid-template-areas: 'name name' 'lastname lastname''email email''password password' 'button button';
-    background-color: #141414;
-    opacity: 0.5;
+    background-color: none;
     padding: 1rem;
 }
 
