@@ -8,45 +8,46 @@
     <link rel="stylesheet" href="/css/signin.css">
     <title>sign-in</title>
 </head>
-<header>
-    <div class=" header-containers">
-        <div>
-            <h1>Sign In</h1>
-        </div>
 
-</header>
 
 <body>
+    <div class="contenair">
+        <header>
+            <div class="head">
+                <h1>Sign In</h1>
+            </div>
+        </header>
 
-    <form method="post" action="#">
-        <fieldset>
-            <div class="body-container">
+        <form method="post" action="#">
+            <fieldset class="fieldset">
 
                 <div class="username">
-                    <label for="username"></label>
+                    <label for="username">Username</label>
                     <input type="text" id="username" class="username" autofocus required placeholder="username or email">
                 </div>
 
                 <div class="password">
-                    <label for="password"></label>
+                    <label for="password">Password</label>
                     <input type="password" id="password" class="password" required placeholder="password">
                 </div>
-                <a class="vgpasswordlink" href="#">Password vergeten?</a>
+                <a class="vgpasswordlink" href="/passwordvergeten.html">Password vergeten?</a>
 
                 <div class="button">
                     <button type="submit" name="uc" value="send">Sign In</button>
                 </div>
 
 
+            </fieldset>
+            <footer>
+                <div class="footer">
+                    <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring
+                    </a>
+                </div>
+            </footer>
 
-            </div>
-        </fieldset>
-
+    </div>
 
 </body>
-<footer>
-    <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring
-    </a>
-</footer>
+
 
 </html>

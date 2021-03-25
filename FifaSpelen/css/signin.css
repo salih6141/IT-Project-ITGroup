@@ -1,82 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-family: ea-sports;
+}
+
+@font-face {
+    src: url(/fonts/EASPORTS15.ttf);
+    font-family: ea-sports;
+}
+
 html {
-    color: yellow;
-    background-color: #141414;
+    display: grid;
     height: 100%;
     width: 100%;
-    background-image: url(/images/background.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(/images/background.jpeg);
+    color: white;
 }
 
-header {
+.head {
     display: flex;
-    justify-content: center;
-    margin: 2rem;
-    height: 100%;
-    width: 100%;
-    margin: 2rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 2px solid white;
+    margin: 1rem;
 }
 
-body {
-    grid-area: body;
-    margin: 2rem;
-}
-
-fieldset {
-    height: 100%;
-    width: 100%;
-    border: none;
+input {
+    width: 40%;
 }
 
 .username {
     display: flex;
-    justify-content: center;
-    margin: 1rem;
-    grid-area: username;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
 }
 
 .password {
     display: flex;
-    justify-content: center;
-    margin: 1rem;
-    grid-area: password;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
 }
 
 .vgpasswordlink {
     display: flex;
     justify-content: center;
     margin: 1rem;
-    padding: 0;
-    grid-area: vgpassword;
 }
 
 .button {
     display: flex;
     justify-content: center;
     margin: 1rem;
-    grid-area: button;
 }
 
-.body-container {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-areas: 'username username' 'password password' 'vgpassword vgpassword' 'button button';
-    grid-gap: 2rem;
-    background-color: none;
+fieldset {
+    border: none;
+}
+
+.fieldset {
+    border: 2px solid white;
     padding: 2rem;
+    margin: 1rem;
 }
 
-footer {
-    width: 100%;
-    height: 100%;
+.footer {
     display: flex;
     justify-content: center;
+    border: 2px solid white;
     padding: 2rem;
-    margin: 2rem;
-    margin-bottom: 0;
+    margin: 1rem;
 }
 
 a {
-    color: yellow;
+    color: white
 }

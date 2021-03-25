@@ -1,87 +1,105 @@
+* {
+    box-sizing: border-box;
+    font-family: ea-sports;
+}
+
+@font-face {
+    src: url(/fonts/EASPORTS15.ttf);
+    font-family: ea-sports;
+}
+
 html {
-    color: yellow;
-    background-color: #141414;
+    display: grid;
     height: 100%;
     width: 100%;
-    background-image: url(/images/background.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(/images/background.jpeg);
+    color: white;
 }
 
-header {
+.head {
     display: flex;
-    justify-content: center;
-    margin: 2rem;
-    height: 100%;
-    width: 100%;
-    margin: 2rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 2px solid white;
+    margin: 1rem;
 }
 
-body {
-    grid-area: body;
-    margin: 2rem;
+.head>h1 {
+    margin-bottom: 0;
 }
 
-fieldset {
-    height: 100%;
-    width: 100%;
-    border: none;
+.head>p {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    width: 40%;
 }
 
 .name {
     display: flex;
-    justify-content: center;
-    margin: 1rem;
-    grid-area: name;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
 }
 
 .lastname {
     display: flex;
-    justify-content: center;
-    margin: 1rem;
-    grid-area: lastname;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
 }
 
 .email {
     display: flex;
-    justify-content: center;
-    margin: 1rem;
-    grid-area: email;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
 }
 
 .password {
     display: flex;
-    justify-content: center;
-    margin: 1rem;
-    grid-area: password;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.bevestigpassword {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
 }
 
 .button {
     display: flex;
     justify-content: center;
     margin: 1rem;
-    grid-area: button;
 }
 
-.container {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-areas: 'name name' 'lastname lastname''email email''password password' 'button button';
-    background-color: none;
-    padding: 1rem;
+fieldset {
+    border: none;
 }
 
-footer {
-    width: 100%;
-    height: 100%;
+.fieldset {
+    border: 2px solid white;
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
     display: flex;
     justify-content: center;
+    border: 2px solid white;
     padding: 2rem;
-    margin: 2rem;
-    margin-bottom: 0;
+    margin: 1rem;
 }
 
 a {
-    color: yellow;
+    color: white;
 }
