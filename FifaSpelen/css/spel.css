@@ -129,6 +129,7 @@ p{
     background-color: goldenrod;
 }
 
+/*navigatie*/
 .sidenav {
   position: absolute;
   height: 100%;
@@ -187,15 +188,20 @@ p{
     }
     .sidenav a{
       position: absolute;
+      width: 500px;
       top: 0;
       display: flex;
       justify-content: row;
     }
     #about{
+
       position: absolute;
       text-decoration: none;
       top: 0;
       left: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    
     }
     #home{
       position: absolute;
@@ -205,11 +211,14 @@ p{
     #settings{
       position: absolute;
       top: 0;
-      left: 200px;
+      left: 230px;
     }
     
     .sidenav .closebtn{
       display: none;
+    }
+    header{
+     box-shadow:grey 0px 2px 5px 2px;
     }
   }
 

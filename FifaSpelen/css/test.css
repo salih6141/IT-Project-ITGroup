@@ -5,7 +5,7 @@ html, body {
     color: yellow;
     background-color: #141414;
 }
-body .modal-content {   
+.modal-content {   
     width: 750px;  
     height: 400px;   
 }
