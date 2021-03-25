@@ -14,7 +14,9 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+  margin: 0;
 }
+
  .container{
      display: inline-block;
      cursor: pointer;
@@ -76,24 +78,27 @@ p{
 
   .flex-grid-leagues{
       position: relative;
+      height: auto;
+      width: auto;
+      
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
       margin: auto;
   }
-
-  .league{
-      position: relative;
-      width: fit-content;
+.league{
+      display: flex;
       height: auto;
-    }
+      width: fit-content;
+      height: auto;margin: auto;
+}
 
   .club{
       position: relative;
       margin: auto;
-      width: auto;
-      height: auto;
+      width: fit-content;
+      height: fit-content;
   }
 
   .btn-endgame{
@@ -168,7 +173,6 @@ p{
     margin-left: 50px;
   }
 
-/*
 .bar1, .bar2, .bar3{
      position: relative;
      width: 35px;
@@ -190,5 +194,5 @@ p{
     transform: rotate(45deg) translate(-8px, -8px);
   }
 
-  */
+
   
