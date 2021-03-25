@@ -11,21 +11,26 @@
     <title>Document</title>
 </head>
 <header>
-    <div class="nav">
-        <div class="container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="settings.html">Settings</a>
+        <a id="about" href="about_page.html">About us</a>
+      </div>
+    
+      <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>   
+        <div class="icon-container">
+            <img class="user-image" src="images/user-member-avatar-face-profile-icon-vector-22965342-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
         </div>
-
-            <script>
-                function myFunction(x) {
-                    x.classList.toggle("change");
-                }
-            </script>
-            <div class="icon-container">
-                <img src="images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png"  alt="Klik om profiel te bekijken/bewerken">
-            </div>
 </div>    
     <div class="titeloverzicht">
     <h1 class="titel_index">Activiteiten overzicht</h1>

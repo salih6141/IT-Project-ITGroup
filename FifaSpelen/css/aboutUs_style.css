@@ -87,7 +87,7 @@ img{
 }
 @media screen and (max-width: 600px){
     body{
-        height: 100vh;
+        height: 100%;
         overflow: auto;
     }
     .text{
