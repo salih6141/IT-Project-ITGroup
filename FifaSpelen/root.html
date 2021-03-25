@@ -1,0 +1,24 @@
+<header>
+    <div id="mysidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10005;</a>
+      <a id="home" href="index.html">Home</a>
+      <a id="settings" href="settings.html">Settings</a>
+      <a id="about" href="about_page.html">About us</a>
+    </div>
+      
+    <span id="hamburgermenu" style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776</span>
+        
+        <script>
+        function openNav() {
+          document.getElementById("mysidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mysidenav").style.width = "0";
+        }
+        </script>
+  
+      <div class="icon-container">
+          <img class="user-image" src="images/user-member-avatar-face-profile-icon-vector-22965342-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
+      </div>
+  </header>

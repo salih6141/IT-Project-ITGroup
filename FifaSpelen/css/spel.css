@@ -152,18 +152,13 @@ p{
   display: block;
   transition: 0.3s;
 }
-
-
 #home {
     top: 20px;
 }
-
   #about{
       text-decoration-line: overline;
       bottom: 100px;
   }
-
-  
   .sidenav a:hover {
     color: black;
   }

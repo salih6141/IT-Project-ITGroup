@@ -1,3 +1,13 @@
+@font-face{
+
+    src: url(/fonts/EASPORTS15.ttf);
+
+    font-family: ea-sports;
+
+}
+* {
+    font-family: ea-sports;
+}
 html, body {
     width: 100vh;
 }
@@ -5,9 +15,18 @@ html, body {
     color: yellow;
     background-color: #141414;
 }
-.modal-content {   
+.modal-header {
+    background-color: black;
+}
+body .modal-content {   
     width: 750px;  
     height: 400px;   
+}
+.modal-title {
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
 }
 .slidecontainer-volume, .slidecontainer-verlichting {
     justify-content: center;
@@ -22,4 +41,17 @@ html, body {
     align-items: center;
     margin-top: -55px;
     font-size: 20px;
+}
+.modal-footer button {
+    background:#141414;
+    color:yellow;
+    width: auto;
+    font-size: 15px;
+}
+.modal-dialog {
+
+    width:100% !important;
+    height: 100%;
+    margin: 0 auto !important;
+    padding:20px 20px;
 }

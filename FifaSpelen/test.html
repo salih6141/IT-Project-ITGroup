@@ -9,42 +9,95 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title> modal-settings </title>
+    <style>
+      body {
+          display: grid;
+          grid-template-columns: 100%;
+          grid-template-rows: 100px;
+          grid-template-areas:
+          'header'
+          'main'
+          'footer';
+          /*grid-column-gap: 20px;*/
+      }
+      header { grid-area: header; }
+      main {
+          grid-area: main;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+      }
+      footer { grid-area: footer; }
+      @media only screen and (max-width: 900px) {
+          body {
+              grid-template-columns: 100%;
+              grid-template-rows: 75px 1fr 1fr 75px;
+              grid-template-areas:
+              'header'
+              'main'
+              'left'
+              'right'
+              'footer';
+              grid-column-gap: 20px;
+          }
+      @media screen and (max-width: 600px) {
+          body {
+              grid-template-columns: 100%;
+              grid-template-rows: 75px 1fr 1fr 75px;
+              grid-template-areas:
+              'header'
+              'main'
+              'left'
+              'right'
+              'footer';
+              grid-column-gap: 20px;
+          }
+          @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+          @media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+          @media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+          @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+          @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+          @media (min-width:1281px) { /* hi-res laptops and desktops */ }
+          }
+      }
+    </style>
 </head>
 <body>
-    <div class="modal-container">
-        <!-- Trigger the modal with a button -->
-        <button class="modal-button" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Settings</button>
-      
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-          
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">GameZone Settings</h4>
-              </div>
-              <div class="modal-body">
-                <div class="settings-box">
-                    <div class="slidecontainer-volume">
-                        <p>GAME VOLUME</p>
-                        <input type="range" min="1" max="100" value="50">
-                    </div>
-            
-                    <div class="slidecontainer-verlichting">
-                        <p>BRIGHTNESS</p>
-                        <input type="range" min="1" max="100" value="50">
-                    </div>
-                </div>    
-              </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
+  <div class="modal-container">
+    <!-- Trigger the modal with a button -->
+    <button class="modal-button" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Settings</button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">GameZone Settings</h4>
           </div>
-        </div>
+          <div class="modal-body">
+            <div class="settings-box">
+                <div class="slidecontainer-volume">
+                    <p>GAME VOLUME</p>
+                    <input type="range" min="1" max="100" value="50">
+                </div>
         
-    </div>
+                <div class="slidecontainer-verlichting">
+                    <p>BRIGHTNESS</p>
+                    <input type="range" min="1" max="100" value="50">
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div> 
+        </div>
+      </div>
+    </div>    
+</div>
+
 </body>
 </html>
