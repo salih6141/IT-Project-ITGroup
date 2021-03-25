@@ -1,27 +1,43 @@
+@font-face{
+    src: url(/fonts/EASPORTS15.ttf);
+    font-family: ea-sports;
+}
+*{
+    font-family: ea-sports; 
+    color: white;
+}
 html, body {
-    background-color: #141414;
+    height: 100%;
 }
-.logo-editProfile-container {
-    position: fixed;
-    right: 10px;
-    top: 5px;
-    width: 35px;
-    height: 5px;
+body {
+    background-image: url("../images/background.jpeg");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
 }
-img{
-    width: 100%;
+img
+{
+    max-width: 100%;
     height: auto;
-    margin-left: 0%;
-    margin-right: 100%;
-    position: right;
-    top: 8px;
-    right: 16px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.user-image:hover{
+    box-shadow: 0px 0px 3px 3px whitesmoke;
+}
+.icon-container{
+   position: fixed;
+   right: 10px;
+   top: 5px;
+   width: 35px;
+   height: 5px;
 }
 .nav-container{
     display: inline-block;
     cursor: pointer;
 }
-
 .bar-1, .bar-2, .bar-3{
     width: 35px;
     height: 5px;
@@ -29,49 +45,151 @@ img{
     margin: 6px 0;
     transition: 0.5s;
 }
-
 .flip-change .bar-1 {
    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
    transform: rotate(-45deg) translate(-9px, 6px);
- }
-
- .flip-change .bar-2 {opacity: 0;}
-
- .flip-change .bar-3 {
+}
+.flip-change .bar-2 {
+    opacity: 0;
+}
+.flip-change .bar-3 {
    -webkit-transform: rotate(45deg) translate(-8px, -8px);
    transform: rotate(45deg) translate(-8px, -8px);
- }
+}
+.sidenav {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgb(64, 64, 64);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    position: absolute;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  
+  #home {
+      top: 20px;
+  }
+  
+    #about{
+        text-decoration-line: overline;
+        bottom: 100px;
+    }
+  
+    
+    .sidenav a:hover {
+      color: rgb(221, 87,87);
+    }
+    
+    .closebtn {
+      color: white;
+      position: relative;
+      top: 0%;
+      right: 0%;
+    }
+  
+    @media only screen and (min-width: 600px){
+      #hamburgermenu{
+        display: none
+      }
+      .sidenav {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      top: 0;
+      overflow-x: visible;
+      }
+      .sidenav a{
+        position: absolute;
+        width: 500px;
+        top: 0;
+        display: flex;
+        justify-content: row;
+      }
+      #about{
+        position: absolute;
+        text-decoration: none;
+        top: 0;
+        left: 100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #home{
+        position: absolute;
+        top: 0;
+        left: 0px;
+      }
+      #settings{
+        position: absolute;
+        top: 0;
+        left: 230px;
+      }
+      .sidenav .closebtn{
+        display: none;
+      }
+      header{
+       box-shadow:grey 0px 2px 5px 2px;
+      }
+    }
 h1 {
     font-size: 50px;
-    width: 260px;
-    color: white;
-    box-sizing: border-box;
+    width: 500px;
+    color: white;   
     text-align: center;
-    border: 1px solid yellow;
-    border-radius: 20%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: black;
-}
-.main-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.edit-container {
-    display: flex;
-    flex-direction: column;
-    color: yellow;
-    font-size: 40px;
-    border: 2px solid white;
-    box-shadow: 2px 2px 2px 2px;
-    width: 350px;
-    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
-
+main {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color: black;
+  }
+  input[type=submit] {
+    background-color: rgb(221, 87, 87);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20%;
+    margin-right: 8px;
+    margin-top: 20px;
+    float: right;
+  }
+  label {
+      color: white;
+  }
+  .landkeuze {
+      color: black;
+  }
+  input[type=submit]:hover {
+    box-shadow: 0px 0px 3px 3px whitesmoke;
+  }
 #footer {
     position: absolute;
     bottom: 0;
@@ -79,6 +197,7 @@ h1 {
     height: 2.5rem;
     justify-content: center;
     text-align: center;
-    color: yellow;
+    color: white;
  }
+
 

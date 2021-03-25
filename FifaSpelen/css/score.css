@@ -119,48 +119,94 @@ h2 {
     background-color: goldenrod;
 }
 
+/*navigatie*/
 .sidenav {
-    position: absolute;
-    height: 100vh;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(217, 165, 32,0.5);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidenav a {
-    position: absolute;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-  }
+  position: absolute;
+  height: 100%;
+  width: 0;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgb(64, 64, 64);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  position: absolute;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+
+#home {
+    top: 20px;
+}
 
   #about{
-      border-top: 1px solid white;
+      text-decoration-line: overline;
       bottom: 100px;
-      color: white;
   }
 
   
   .sidenav a:hover {
-    color: rgb(221, 87, 87)
+    color: rgb(221, 87,87);
   }
   
-  .sidenav .closebtn {
+  .closebtn {
     color: white;
-    position: absolute;
+    position: relative;
+    top: 0%;
+    right: 0%;
+  }
+
+  @media only screen and (min-width: 600px){
+    #hamburgermenu{
+      display: none
+    }
+    .sidenav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    overflow-x: visible;
+    }
+    .sidenav a{
+      position: absolute;
+      width: 500px;
+      top: 0;
+      display: flex;
+      justify-content: row;
+    }
+    #about{
+      position: absolute;
+      text-decoration: none;
+      top: 0;
+      left: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #home{
+      position: absolute;
+      top: 0;
+      left: 0px;
+    }
+    #settings{
+      position: absolute;
+      top: 0;
+      left: 230px;
+    }
+    .sidenav .closebtn{
+      display: none;
+    }
+    header{
+     box-shadow:grey 0px 2px 5px 2px;
+    }
   }
   
 

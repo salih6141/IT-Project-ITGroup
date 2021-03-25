@@ -129,15 +129,15 @@ p{
     background-color: goldenrod;
 }
 
+/*navigatie*/
 .sidenav {
   position: absolute;
   height: 100%;
   width: 0;
-  position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   left: 0;
-  background-color: rgb(217, 165, 32,0.5);
+  background-color: rgb(64, 64, 64);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -154,45 +154,72 @@ p{
 }
 
 
+#home {
+    top: 20px;
+}
+
   #about{
-      border-top: 1px solid white;
+      text-decoration-line: overline;
       bottom: 100px;
   }
 
   
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: rgb(221, 87,87);
   }
   
-  .sidenav .closebtn {
-    color: goldenrod;
-    position: absolute;
+  .closebtn {
+    color: white;
+    position: relative;
+    top: 0%;
+    right: 0%;
+  }
+
+  @media only screen and (min-width: 600px){
+    #hamburgermenu{
+      display: none
+    }
+    .sidenav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    overflow-x: visible;
+    }
+    .sidenav a{
+      position: absolute;
+      width: 500px;
+      top: 0;
+      display: flex;
+      justify-content: row;
+    }
+    #about{
+      position: absolute;
+      text-decoration: none;
+      top: 0;
+      left: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #home{
+      position: absolute;
+      top: 0;
+      left: 0px;
+    }
+    #settings{
+      position: absolute;
+      top: 0;
+      left: 230px;
+    }
+    .sidenav .closebtn{
+      display: none;
+    }
+    header{
+     box-shadow:grey 0px 2px 5px 2px;
+    }
   }
 
-.bar1, .bar2, .bar3{
-     position: relative;
-     width: 35px;
-     height: 5px;
-     background-color:goldenrod;
-     margin: 6px 0;
-     transition: 0.5s;
- }
 
- .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
 
 
   
