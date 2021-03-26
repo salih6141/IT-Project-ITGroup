@@ -113,6 +113,8 @@ body {
     color: black;
     background-color: goldenrod;
 }
+
+
 @media only screen and (max-width: 600px){
   .club{
     margin-left: auto;
@@ -122,8 +124,64 @@ body {
   .flex-grid-leagues{
     height: 300px;
   }
+  .speaker {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .mute-button{
+    position: fixed;
+    right: 38px;
+    top: 8%;
+  }
+    .mute-span {
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      margin: 11px 0 0 2px;
+    }
+      .mute-span:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        border-width: 10px 14px 10px 15px;
+        left: -13px;
+        top: 5px;
+      }
+  
+      .mute-span:before {
+        transform: rotate(45deg);
+        border-radius: 0 50px 0 0;
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-style: double;
+        border-color: #fff;
+        border-width: 7px 7px 0 0;
+        left: 18px;
+        top: 9px;
+        transition: all 0.2s ease-out;
+      }
+    
+  
+    .mute-span:hover::before {
+        transform: scale(.8) translate(-3px, 0) rotate(42deg);		
+      }
+    
+    
+    .mute ::before{
+        transform: scale(.5) translate(-15px, 0) rotate(36deg);
+        opacity: 0;
+      }
 }
-@media only screen and (max-height: 600px){
+@media only screen and (max-height: 650px){
   .club{
     margin-left: auto;
     margin-right: auto;
@@ -132,6 +190,62 @@ body {
   .flex-grid-leagues{
     height: 200px;
   }
+  .speaker {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .mute-button{
+    position: fixed;
+    right: 38px;
+    top: 8%;
+  }
+    .mute-span {
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      margin: 11px 0 0 2px;
+    }
+      .mute-span:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        border-width: 10px 14px 10px 15px;
+        left: -13px;
+        top: 5px;
+      }
+  
+      .mute-span:before {
+        transform: rotate(45deg);
+        border-radius: 0 50px 0 0;
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-style: double;
+        border-color: #fff;
+        border-width: 7px 7px 0 0;
+        left: 18px;
+        top: 9px;
+        transition: all 0.2s ease-out;
+      }
+    
+  
+    .mute-span:hover::before {
+        transform: scale(.8) translate(-3px, 0) rotate(42deg);		
+      }
+    
+    
+    .mute ::before{
+        transform: scale(.5) translate(-15px, 0) rotate(36deg);
+        opacity: 0;
+      }
 }
 /* || sk-spel.html-body */
 
@@ -300,3 +414,6 @@ body {
       }
     }
 /* || navigatie*/
+
+
+
