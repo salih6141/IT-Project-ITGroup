@@ -24,7 +24,7 @@
  }
  .icon-container{
     position: fixed;
-    right: 10px;
+    right: 0px;
     top: 5px;
     width: 35px;
     height: 5px;
@@ -59,6 +59,8 @@
 .club{
   position: relative;
   padding: auto;
+  width: auto;
+  height: auto;
   margin-left: 45%;
   margin-right: 45%;
 }
@@ -77,6 +79,7 @@
       margin: auto;
       padding: 0 10px 0 10px;
   }
+
   .sk-btn-endgame{
     display: flex;
     position: relative;
@@ -102,6 +105,26 @@
   .sk-btn-endgame:hover {
     color: black;
     background-color: goldenrod;
+}
+@media only screen and (max-width: 600px){
+  .club{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+  .flex-grid-leagues{
+    height: 300px;
+  }
+}
+@media only screen and (max-height: 600px){
+  .club{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+  .flex-grid-leagues{
+    height: 200px;
+  }
 }
 /*body*/
 
