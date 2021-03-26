@@ -29,9 +29,7 @@
     width: 35px;
     height: 5px;
  }
- .sk-container-game{
-     position: relative;
- }
+
  .user-image{
     position: relative;
      width: 100%;
@@ -46,6 +44,11 @@
  .user-image:hover{
     box-shadow: 0px 0px 3px 3px whitesmoke;
  }
+
+ 
+ .sk-container-game{
+  position: relative;
+}
 
  .sk-h1 {
     position: relative;
