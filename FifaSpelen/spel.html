@@ -20,11 +20,11 @@
       
       <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mysidenav").style.width = "250px";
       }
       
       function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mysidenav").style.width = "0";
       }
       </script>   
         <div class="icon-container">
@@ -34,18 +34,18 @@
        
     </header>
     <body>
-        <div class="container-game">
-            <h1><p>In welke league speelt de club?<br>Selecteer de juiste league.</p></h1> 
+        <h1 class="sk-h1"><p class="sk-p">In welke league speelt de club?<br>Selecteer de juiste league.</p></h1> 
             <div class="club">
-                <img src="images/league_icon-removebg-preview.png">
+                <img id="img-club" src="images/league_icon-removebg-preview.png">
             </div>
+        <div class="sk-container-game">
             <div class="flex-grid-leagues">
                 <div class="league"><img  src="images/league_icon-removebg-preview.png"></div>
                 <div class="league"><img  src="images/league_icon-removebg-preview.png"></div>
                 <div class="league"><img  src="images/league_icon-removebg-preview.png"></div>
             </div>
-            <div class="btn">
-            <button class="btn-endgame" onclick="window.location.href='score.html'">end game</a></button>
+            <div class="sk-btn">
+            <button class="sk-btn-endgame" onclick="window.location.href='score.html'">end game</a></button>
         </div>
         </div>
     </body>

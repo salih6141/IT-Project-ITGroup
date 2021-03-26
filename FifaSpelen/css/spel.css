@@ -8,6 +8,7 @@
     color: white;
  }
 
+ /*body*/
  body {
   background-image: url("../images/background.jpeg");
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -16,19 +17,11 @@
   height: 100vh;
   margin: 0;
 }
-
- .container{
-     display: inline-block;
-     cursor: pointer;
-     border-radius: 100%;
- }
-
  img{
      max-width: 100%;
      height: auto;
      border-radius: 50%;
  }
-
  .icon-container{
     position: fixed;
     right: 10px;
@@ -36,14 +29,9 @@
     width: 35px;
     height: 5px;
  }
-
- .container-game{
+ .sk-container-game{
      position: relative;
-     width: auto;
-     display: grid;
  }
-
-
  .user-image{
     position: relative;
      width: 100%;
@@ -59,10 +47,8 @@
     box-shadow: 0px 0px 3px 3px whitesmoke;
  }
 
- h1 {
+ .sk-h1 {
     position: relative;
-    width: auto;
-    height: auto;
     color: white;
     text-align: center;
     display: block;
@@ -70,38 +56,28 @@
     margin-right: auto; 
     font-size: 150%;
 }
-
-p{
+.club{
+  position: relative;
+  padding: auto;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+.sk-p{
     position: relative;
     text-align: center;
 }
-
   .flex-grid-leagues{
       position: relative;
       height: auto;
       width: auto;
-      
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
       margin: auto;
+      padding: 0 10px 0 10px;
   }
-.league{
-      display: flex;
-      height: auto;
-      width: fit-content;
-      height: auto;margin: auto;
-}
-
-  .club{
-      position: relative;
-      margin: auto;
-      width: fit-content;
-      height: fit-content;
-  }
-
-  .btn-endgame{
+  .sk-btn-endgame{
     display: flex;
     position: relative;
     margin: auto;
@@ -123,11 +99,12 @@ p{
     transition: 0.5s;
     
   }
-
-  .btn-endgame:hover {
+  .sk-btn-endgame:hover {
     color: black;
     background-color: goldenrod;
 }
+/*body*/
+
 
 /*navigatie*/
 .sidenav {
@@ -142,7 +119,6 @@ p{
   transition: 0.5s;
   padding-top: 60px;
 }
-
 .sidenav a {
   position: absolute;
   padding: 8px 8px 8px 32px;
@@ -152,29 +128,22 @@ p{
   display: block;
   transition: 0.3s;
 }
-
-
 #home {
     top: 20px;
 }
-
   #about{
       text-decoration-line: overline;
       bottom: 100px;
   }
-
-  
   .sidenav a:hover {
     color: rgb(221, 87,87);
   }
-  
   .closebtn {
     color: white;
     position: relative;
     top: 0%;
     right: 0%;
   }
-
   @media only screen and (min-width: 600px){
     #hamburgermenu{
       display: none
@@ -218,7 +187,7 @@ p{
      box-shadow:grey 0px 2px 5px 2px;
     }
   }
-
+/*navigatie*/
 
 
 
