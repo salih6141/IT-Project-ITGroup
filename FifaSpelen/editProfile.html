@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/editProfile.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/root.css">
+    <title>editProfile</title>
 </head>
 <style>
     @media only screen and (min-width: 600px) {
@@ -65,26 +65,26 @@
 </header>
 <body>
     <div>
-        <h1><strong>EDIT  PROFILE</strong></h1>
+        <h1 class="az-h1"><strong>EDIT  PROFILE</strong></h1>
     </div>
 
-    <main class="main-container">
-        <div class="form-container">
-            <form action="AZ-contact.html">
-                <label for="fname">Voornaam</label>
-                <input type="text" id="fname" name="voornaam" placeholder="Vul hier uw voornaam in">
+    <main class="az-main-container">
+        <div>
+            <form action="az-contact.html">
+                <label class="az-label" for="fname">Voornaam</label>
+                <input class="az-input" type="text" id="fname" name="voornaam" placeholder="Vul hier uw voornaam in">
 
-                <label for="lname">Familienaam</label>
-                <input type="text" id="lname" name="lastname" placeholder="Vul hier uw familienaam in">
+                <label class="az-label" for="lname">Familienaam</label>
+                <input class="az-input"  type="text" id="lname" name="lastname" placeholder="Vul hier uw familienaam in">
 
-                <label for="e-mail">E-mail</label>
-                <input type="text" id="e-mail" name="e-mail" placeholder="fifa-21@hotmail.com">
+                <label class="az-label" for="e-mail">E-mail</label>
+                <input class="az-input"  type="text" id="e-mail" name="e-mail" placeholder="fifa-21@hotmail.com">
 
-                <label for="telefoonnummer">Telefoonnummer</label>
-                <input type="text" id="telefoon" name="telefoon" placeholder="Vul hier uw telefoonnummer in">
+                <label class="az-label" for="telefoonnummer">Telefoonnummer</label>
+                <input class="az-input"  type="text" id="telefoon" name="telefoon" placeholder="Vul hier uw telefoonnummer in">
 
                 <div class="landkeuze">
-                    <label  for="country">Land</label>
+                    <label class="az-label" for="country">Land</label>
                     <select id="country" name="country">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albanië">Albanië</option>
@@ -290,5 +290,6 @@
     </main>
 
     <footer id="footer">IT-Project -- Adil Ziani - Achraf Ahrirou - Salih Komut - Mamadou Barry -- <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring</a></footer>
-</body>
+
+  </body>
 </html>

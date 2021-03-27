@@ -34,28 +34,7 @@ img
    width: 35px;
    height: 5px;
 }
-.nav-container{
-    display: inline-block;
-    cursor: pointer;
-}
-.bar-1, .bar-2, .bar-3{
-    width: 35px;
-    height: 5px;
-    background-color: yellow;
-    margin: 6px 0;
-    transition: 0.5s;
-}
-.flip-change .bar-1 {
-   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-   transform: rotate(-45deg) translate(-9px, 6px);
-}
-.flip-change .bar-2 {
-    opacity: 0;
-}
-.flip-change .bar-3 {
-   -webkit-transform: rotate(45deg) translate(-8px, -8px);
-   transform: rotate(45deg) translate(-8px, -8px);
-}
+
 .sidenav {
     position: absolute;
     height: 100%;
@@ -144,7 +123,7 @@ img
        box-shadow:grey 0px 2px 5px 2px;
       }
     }
-h1 {
+.az-h1 {
     font-size: 50px;
     width: 500px;
     color: white;   
@@ -152,14 +131,14 @@ h1 {
     margin-left: auto;
     margin-right: auto;
 }
-main {
+.az-main-container {
     display: flex;
     width: 40%;
     margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
 }
-input, select, textarea {
+  .az-input, select, textarea {
     width: 100%;
     padding: 12px;
     border-radius: 4px;
@@ -181,11 +160,11 @@ input, select, textarea {
     margin-top: 20px;
     float: right;
   }
-  label {
+  .az-label {
       color: white;
   }
-  .landkeuze {
-      color: black;
+  option {
+    color: black;
   }
   input[type=submit]:hover {
     box-shadow: 0px 0px 3px 3px whitesmoke;
@@ -199,5 +178,9 @@ input, select, textarea {
     text-align: center;
     color: white;
  }
+ #footer :hover{
+  color: rgb(221, 87, 87);
+}
+
 
 
