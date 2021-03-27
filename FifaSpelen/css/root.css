@@ -176,7 +176,7 @@ body {
       }
     
     
-    .mute ::before{
+    .mute:before{
         transform: scale(.5) translate(-15px, 0) rotate(36deg);
         opacity: 0;
       }
