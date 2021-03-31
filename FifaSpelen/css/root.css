@@ -138,6 +138,7 @@ img {
     .flex-grid-leagues {
         height: 300px;
     }
+    /*footer display none*/
     #footer{
         display: none;
     }
@@ -513,7 +514,7 @@ input[type=submit]:hover {
 
 
 
-/*log-in*/
+/* || mb-log-in*/
 
 * {
     box-sizing: border-box;
@@ -570,6 +571,19 @@ input {
     justify-content: center;
     margin: 1rem;
 }
+.login-button{
+    background-color: rgb(221, 87, 87,0.3);
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+}
+.login-button:hover{
+    color: black;
+    background-color: goldenrod;
+    cursor: pointer;
+}
 
 fieldset {
     border: none;
@@ -585,6 +599,22 @@ fieldset {
     justify-content: center;
     padding: 2rem;
     margin: 1rem;
+}
+@media only screen and (max-width: 600px){
+    .username-label{
+        font-size: 1.4em;
+    }
+    .password-label{
+        font-size: 1.4em;
+    }
+    #username{
+        width: 150px;
+        height: 35px;
+    }
+    #password{
+        width: 150px;
+        height: 35px;
+    }
 }
 
 a {
