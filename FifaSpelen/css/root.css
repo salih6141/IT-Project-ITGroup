@@ -333,17 +333,34 @@ body {
   gap: 10px;
 }
 .activiteiten{
+  background-color:grey;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: not-allowed;
+}
+.activiteiten-fifa{
   background-color: rgb(221, 87, 87);
-  height: 20px;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 600px){
-  .overzicht{
-      width: 200px;
-      height: 450px;
+  .activiteiten{
+      width: 300px;
+  }
+  .activiteiten-fifa{
+    width: 300px;
   }
 }
 @media only screen and (max-height: 650px){
-
+     .activiteiten{
+       height: 40px;
+       font-size: 35px;
+     }
+     .activiteiten-fifa{
+       height: 40px;
+       font-size: 35px;
+     }
 }
 
 /* || aa-index.html-body*/
