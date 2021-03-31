@@ -406,6 +406,9 @@ body {
         top: 0;
         left: 230px;
       }
+      #settings-about{
+        left: 100px;
+      }
       .sidenav .closebtn{
         display: none;
       }
