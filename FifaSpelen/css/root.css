@@ -138,6 +138,9 @@ img {
     .flex-grid-leagues {
         height: 300px;
     }
+    #footer{
+        display: none;
+    }
 }
 
 @media only screen and (max-height: 650px) {
@@ -150,8 +153,6 @@ img {
         height: 200px;
     }
 }
-
-
 /* || sk-spel.html-body */
 
 
