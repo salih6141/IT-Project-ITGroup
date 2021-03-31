@@ -415,5 +415,56 @@ body {
     }
 /* || navigatie*/
 
+/* css editProfile Adil */
+.az-h1 {
+  font-size: 80px;
+  width: 500px;
+  color: white;   
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.az-main-container {
+  display: flex;
+  width: 30%;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 85px;
+}
+.az-input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: black;
+}
+input[type=submit] {
+  background-color: rgb(221, 87, 87);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 20%;
+  margin-right: 8px;
+  margin-top: 20px;
+  float: right;
+}
+.az-label {
+    color: white;
+}
+option {
+  color: black;
+}
+input[type=submit]:hover {
+  box-shadow: 0px 0px 3px 3px whitesmoke;
+}
+
+
 
 
