@@ -422,6 +422,7 @@ img {
         flex-direction: row;
         top: 0;
         overflow-x: visible;
+        height: 100%;
     }
     .sidenav a {
         position: absolute;
