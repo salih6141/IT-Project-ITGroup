@@ -316,12 +316,13 @@ body {
 
 /* || aa-index.html-body*/
 .aa-h1{
+  margin-top: 5%;
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
 }
 .overzicht{  
   margin: auto;
-  margin-top: none;
+  margin-top: 10%;
  width: fit-content;
  height: fit-content;
  padding: 10px;
@@ -335,21 +336,30 @@ body {
 .activiteiten{
   background-color:grey;
   border-radius: 5px;
-  font-size: 40px;
+  font-size: 52px;
   cursor: not-allowed;
 }
 .activiteiten-fifa{
   background-color: rgb(221, 87, 87);
   border-radius: 5px;
-  font-size: 40px;
+  font-size: 52px;
   cursor: pointer;
 }
 @media only screen and (max-width: 600px){
+
+  .aa-h1{
+    font-size: 35px;
+  }
   .activiteiten{
       width: 300px;
+      font-size: 35px;
+    
   }
   .activiteiten-fifa{
     width: 300px;
+  }
+  .overzicht{
+    margin-top: 10%;
   }
 }
 @media only screen and (max-height: 650px){
@@ -364,6 +374,54 @@ body {
 }
 
 /* || aa-index.html-body*/
+
+/* || aa-aboutUs */
+.aa_header{
+  height: 60px;
+}
+.aa_body_aboutus{
+  height: 100vh;
+  background-image: url(/images/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 
+  "head head head"
+  "header header "
+   "main main main";  
+}
+
+
+.aa_hoofdtitel{
+  grid-area: 'header';
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+.aa_text{
+  margin: 3%;
+  background-color: rgb(221, 87, 87,0.3);
+  padding: 5%;
+  font-size: 30px;
+}
+@media screen and (max-width: 600px){
+  .aa_body_aboutus{
+      height: 100vh;
+      overflow: auto;
+  }
+  .aa_text{
+      font-size: 15px;
+      margin-top:0%;
+     }
+     #footer{
+       
+       font-size: 10px;
+     }
+}
+
+
+/* end aa-aboutUs */
 
 /* || body*/
 
@@ -423,7 +481,8 @@ body {
     }
     @media only screen and (min-width: 600px){
       #hamburgermenu{
-        display: none
+        display: none; 
+    
       }
       .sidenav {
       position: relative;
@@ -465,6 +524,7 @@ body {
       }
       header{
        box-shadow:grey 0px 2px 5px 2px;
+       
       }
     }
 /* || navigatie*/
