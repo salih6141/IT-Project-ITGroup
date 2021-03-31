@@ -119,12 +119,23 @@ img {
 }
 main {
   display: flex;
-  flex-direction: row;  
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+.az-flex-container {
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;
   max-width: 100%;
   height: 100%;
   flex-wrap: wrap;
+}
+.az-headings-container {
+  display: flex;
+  flex-direction: row;
+}
+.az-feedback-heading-container {
+  width: 50%;
 }
 .az-settings-container {
   display: flex;
@@ -142,30 +153,41 @@ main {
   font-size: 50px;
   text-align: center;
   margin: 5px;
+  filter: drop-shadow(4px 8px 16px #585858)
 }
 .sub-heading {
   color: white;
   font-size: 18px;
   text-align: center;
+  filter: drop-shadow(4px 8px 16px #585858)
 }
-.settings-box {
+.az-settings-box {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color:white;
   font-size: 38px;
   border-right: 5px solid white;
 }
-.slidecontainer-volume,
-.slidecontainer-verlichting {
+.az-slidecontainer-volume,
+.az-slidecontainer-verlichting {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-bottom: 15px;
+  margin-bottom: 30px;
   color: white;
 }
-.settings-form {
+.az-slidecontainer-volume > p,
+.az-slidecontainer-verlichting > p {
+  margin-bottom: 20px
+}
+.az-settings-form {
   padding-top: 10px;
   color: white;
-  text-align: center;
+}
+.az-settings-form label {
+  font-size: 20px;
 }
 .az-feedback-container {
   padding: 0 10px;
@@ -179,6 +201,7 @@ main {
 }
 .az-settings-heading-container {
   margin-bottom: 20px;
+  width: 50%;
 }
 .rate:not(:checked) > input {
   position:absolute;
@@ -197,18 +220,18 @@ main {
   content: '★ ';
 }
 .rate > input:checked ~ label {
-  color: #ffc700;
+  color: rgb(221, 87,87);
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-  color: #deb217;
+  color: rgb(221, 87,87);
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
-  color: #c59b08;
+  color: rgb(221, 87,87);
 }
 .az-form-feedback {
   display: flex;
@@ -222,7 +245,7 @@ main {
   font-size: 25px;
   width: 50%;
 }
-.email-field {
+.az-email-field {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -249,7 +272,7 @@ main {
   width: 100%;
   color: black;
 }
-input[type=submit] {
+.az-fieldset-container input[type=submit] {
   background-color: rgb(221, 87, 87);
   color: black;
   padding: 12px 15px;
@@ -260,7 +283,7 @@ input[type=submit] {
   margin-top: 20px;
   float: right;
 }
-input[type=submit]:hover {
+.az-fieldset-container input[type=submit]:hover {
   box-shadow: 0px 0px 3px 3px whitesmoke;
 }
 #footer {
