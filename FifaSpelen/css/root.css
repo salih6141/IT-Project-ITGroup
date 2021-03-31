@@ -1,97 +1,112 @@
 /* font */
-@font-face{
+
+@font-face {
     src: url(/fonts/EASPORTS15.ttf);
     font-family: ea-sports;
 }
 
-*{
+* {
     font-family: ea-sports;
-    color: white;  
+    color: white;
 }
 
+
 /* || header*/
- .icon-container{
+
+.icon-container {
     position: fixed;
     right: 0px;
     top: 5px;
     width: 35px;
     height: 5px;
- }
- 
- .user-image{
+}
+
+.user-image {
     position: relative;
-     width: 100%;
-     height: auto;
-     margin-left: 0%;
-     margin-right: 100%;
-     position: right;
-     top: 8px;
-     right: 16px;
-     border-radius: 50%;
- }
- .user-image:hover{
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
+    margin-right: 100%;
+    position: right;
+    top: 8px;
+    right: 16px;
+    border-radius: 50%;
+}
+
+.user-image:hover {
     box-shadow: 0px 0px 3px 3px whitesmoke;
- }
+}
+
+
 /* || header*/
 
 
 /* || body*/
-body {
-  background-image: url("../images/background.jpeg");
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  margin: 0;
-}
- img{
-     max-width: 100%;
-     height: auto;
-     border-radius: 50%;
- }
 
- /* || sk-spel.html-body */
- .sk-container-game{
-  position: relative;
+body {
+    background-image: url("../images/background.jpeg");
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
 }
- .sk-h1-spel {
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/* || sk-spel.html-body */
+
+.sk-container-game {
+    position: relative;
+}
+
+.sk-h1-spel {
     position: relative;
     color: white;
     text-align: center;
     display: block;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     font-size: 150%;
 }
-.club{
-  position: relative;
-  padding: auto;
-  width: auto;
-  height: auto;
-  margin-left: 45%;
-  margin-right: 45%;
+
+.club {
+    position: relative;
+    padding: auto;
+    width: auto;
+    height: auto;
+    margin-left: 45%;
+    margin-right: 45%;
 }
-.sk-p-spel{
+
+.sk-p-spel {
     position: relative;
     text-align: center;
 }
-  .flex-grid-leagues{
-      position: relative;
-      height: auto;
-      width: auto;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      margin: auto;
-      padding: 0 10px 0 10px;
-  }
 
-  .sk-btn-endgame{
+.flex-grid-leagues {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 10px 0 10px;
+}
+
+.sk-btn-endgame {
     display: flex;
     position: relative;
     margin: auto;
-    background-color: rgb(221, 87,87,0.3);
+    background-color: rgb(221, 87, 87, 0.3);
     color: var(--c);
     font-size: 16px;
     border: 0.3em solid var(--c);
@@ -107,43 +122,104 @@ body {
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
-    
-  }
-  .sk-btn-endgame:hover {
+}
+
+.sk-btn-endgame:hover {
     color: black;
     background-color: goldenrod;
 }
 
+@media only screen and (max-width: 600px) {
+    .club {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
+    .flex-grid-leagues {
+        height: 300px;
+    }
+    .speaker {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+    .mute-button {
+        position: fixed;
+        right: 38px;
+        top: 8%;
+    }
+    .mute-span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        margin: 11px 0 0 2px;
+    }
+    .mute-span:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        border-width: 10px 14px 10px 15px;
+        left: -13px;
+        top: 5px;
+    }
+    .mute-span:before {
+        transform: rotate(45deg);
+        border-radius: 0 50px 0 0;
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-style: double;
+        border-color: #fff;
+        border-width: 7px 7px 0 0;
+        left: 18px;
+        top: 9px;
+        transition: all 0.2s ease-out;
+    }
+    .mute-span:hover::before {
+        transform: scale(.8) translate(-3px, 0) rotate(42deg);
+    }
+    .mute:before {
+        transform: scale(.5) translate(-15px, 0) rotate(36deg);
+        opacity: 0;
+    }
+}
 
-@media only screen and (max-width: 600px){
-  .club{
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-  }
-  .flex-grid-leagues{
-    height: 300px;
-  }
-  .speaker {
-    height: 30px;
-    width: 30px;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-  }
-  .mute-button{
-    position: fixed;
-    right: 38px;
-    top: 8%;
-  }
-    .mute-span {
-      display: block;
-      width: 8px;
-      height: 8px;
-      background: #fff;
-      margin: 11px 0 0 2px;
+@media only screen and (max-height: 650px) {
+    .club {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
     }
-      .mute-span:after {
+    .flex-grid-leagues {
+        height: 200px;
+    }
+    .speaker {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+    .mute-button {
+        position: fixed;
+        right: 38px;
+        top: 8%;
+    }
+    .mute-span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        margin: 11px 0 0 2px;
+    }
+    .mute-span:after {
         content: '';
         position: absolute;
         width: 0;
@@ -153,9 +229,8 @@ body {
         border-width: 10px 14px 10px 15px;
         left: -13px;
         top: 5px;
-      }
-  
-      .mute-span:before {
+    }
+    .mute-span:before {
         transform: rotate(45deg);
         border-radius: 0 50px 0 0;
         content: '';
@@ -168,97 +243,33 @@ body {
         left: 18px;
         top: 9px;
         transition: all 0.2s ease-out;
-      }
-    
-  
-    .mute-span:hover::before {
-        transform: scale(.8) translate(-3px, 0) rotate(42deg);		
-      }
-    
-    
-    .mute ::before{
-        transform: scale(.5) translate(-15px, 0) rotate(36deg);
-        opacity: 0;
-      }
-}
-@media only screen and (max-height: 650px){
-  .club{
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-  }
-  .flex-grid-leagues{
-    height: 200px;
-  }
-  .speaker {
-    height: 30px;
-    width: 30px;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-  }
-  .mute-button{
-    position: fixed;
-    right: 38px;
-    top: 8%;
-  }
-    .mute-span {
-      display: block;
-      width: 8px;
-      height: 8px;
-      background: #fff;
-      margin: 11px 0 0 2px;
     }
-      .mute-span:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: transparent #fff transparent transparent;
-        border-width: 10px 14px 10px 15px;
-        left: -13px;
-        top: 5px;
-      }
-  
-      .mute-span:before {
-        transform: rotate(45deg);
-        border-radius: 0 50px 0 0;
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        border-style: double;
-        border-color: #fff;
-        border-width: 7px 7px 0 0;
-        left: 18px;
-        top: 9px;
-        transition: all 0.2s ease-out;
-      }
-    
-  
     .mute-span:hover::before {
-        transform: scale(.8) translate(-3px, 0) rotate(42deg);		
-      }
-    
-    
-    .mute ::before{
+        transform: scale(.8) translate(-3px, 0) rotate(42deg);
+    }
+    .mute ::before {
         transform: scale(.5) translate(-15px, 0) rotate(36deg);
         opacity: 0;
-      }
+    }
 }
+
+
 /* || sk-spel.html-body */
 
+
 /* || sk-score.html-body*/
-.sk-container-score{
-  position: relative;
-  width: auto;
-  height: auto;
-  margin: auto;
- display: flex;
- flex-direction: column;
+
+.sk-container-score {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
- .sk-h1 , .sk-h2{
+
+.sk-h1,
+.sk-h2 {
     position: relative;
     width: auto;
     height: auto;
@@ -267,7 +278,7 @@ body {
     padding: 5px;
     display: block;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     font-size: 200%;
 }
 
@@ -280,15 +291,17 @@ body {
     height: auto;
     border-radius: 5%;
     text-align: left;
-    background-color: rgb(221, 87, 87,0.3);
+    background-color: rgb(221, 87, 87, 0.3);
 }
+
 @media only screen and (max-width: 600px) {
-  .sk-h2{
-    width: 250px;
-  }
+    .sk-h2 {
+        width: 250px;
+    }
 }
-.sk-btn-home{
-  background-color: rgb(221, 87, 87,0.3);
+
+.sk-btn-home {
+    background-color: rgb(221, 87, 87, 0.3);
     display: flex;
     margin: auto;
     color: var(--c);
@@ -306,33 +319,156 @@ body {
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
-  }
-  .sk-btn-home:hover {
+}
+
+.sk-btn-home:hover {
     color: black;
     background-color: goldenrod;
     cursor: pointer;
 }
+
+
 /* || sk-score.html-body*/
+
+
+/* || aa-index.html-body*/
+
+.aa-h1 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.overzicht {
+    margin: auto;
+    margin-top: 10%;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    grid-area: 'main';
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.activiteiten {
+    background-color: grey;
+    border-radius: 5px;
+    font-size: 52px;
+    cursor: not-allowed;
+}
+
+.activiteiten-fifa {
+    background-color: rgb(221, 87, 87);
+    border-radius: 5px;
+    font-size: 52px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .aa-h1 {
+        font-size: 35px;
+    }
+    .activiteiten {
+        width: 300px;
+        font-size: 35px;
+    }
+    .activiteiten-fifa {
+        width: 300px;
+    }
+    .overzicht {
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .activiteiten {
+        height: 40px;
+        font-size: 35px;
+    }
+    .activiteiten-fifa {
+        height: 40px;
+        font-size: 35px;
+    }
+}
+
+
+/* || aa-index.html-body*/
+
+
+/* || aa-aboutUs */
+
+.aa_header {
+    height: 60px;
+}
+
+.aa_body_aboutus {
+    height: 100vh;
+    background-image: url(/images/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: "head head head" "header header " "main main main";
+}
+
+.aa_hoofdtitel {
+    grid-area: 'header';
+    text-align: center;
+    font-size: 30px;
+}
+
+.aa_text {
+    margin: 3%;
+    background-color: rgb(221, 87, 87, 0.3);
+    padding: 5%;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .aa_body_aboutus {
+        height: 100vh;
+        overflow: auto;
+    }
+    .aa_text {
+        font-size: 15px;
+        margin-top: 0%;
+    }
+    #footer {
+        font-size: 10px;
+    }
+}
+
+
+/* end aa-aboutUs */
+
 
 /* || body*/
 
+
 /* || footer*/
+
 #footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  justify-content: center;
-  text-align: center;
-  color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 2.5rem;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
-#footer :hover{
-  color: rgb(221, 87, 87);
+
+#footer :hover {
+    color: rgb(221, 87, 87);
 }
+
 
 /* || footer */
 
+
 /* || navigatie */
+
 .sidenav {
     position: absolute;
     height: 100%;
@@ -344,8 +480,9 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-  }
-  .sidenav a {
+}
+
+.sidenav a {
     position: absolute;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -353,66 +490,76 @@ body {
     color: white;
     display: block;
     transition: 0.3s;
-  } 
-  #home {
-      top: 20px;
-  }
-    #about{
-        text-decoration-line: overline;
-        bottom: 100px;
-    }    
-    .sidenav a:hover {
-      color: rgb(221, 87,87);
-    }   
-    .closebtn {
-      color: white;
-      position: relative;
-      top: 0%;
-      right: 0%;
+}
+
+#home {
+    top: 20px;
+}
+
+#about {
+    text-decoration-line: overline;
+    bottom: 100px;
+}
+
+.sidenav a:hover {
+    color: rgb(221, 87, 87);
+}
+
+.closebtn {
+    color: white;
+    position: relative;
+    top: 0%;
+    right: 0%;
+}
+
+@media only screen and (min-width: 600px) {
+    #hamburgermenu {
+        display: none;
     }
-    @media only screen and (min-width: 600px){
-      #hamburgermenu{
-        display: none
-      }
-      .sidenav {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      top: 0;
-      overflow-x: visible;
-      }
-      .sidenav a{
+    .sidenav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        overflow-x: visible;
+    }
+    .sidenav a {
         position: absolute;
         width: 500px;
         top: 0;
         display: flex;
         justify-content: row;
-      }
-      #about{
+    }
+    #about {
         position: absolute;
         text-decoration: none;
         top: 0;
         left: 100px;
         margin-left: auto;
         margin-right: auto;
-      }
-      #home{
+    }
+    #home {
         position: absolute;
         top: 0;
         left: 0px;
-      }
-      #settings{
+    }
+    #settings {
         position: absolute;
         top: 0;
         left: 230px;
-      }
-      .sidenav .closebtn{
-        display: none;
-      }
-      header{
-       box-shadow:grey 0px 2px 5px 2px;
-      }
     }
+    #settings-about {
+        left: 100px;
+    }
+    .sidenav .closebtn {
+        display: none;
+    }
+    header {
+        box-shadow: grey 0px 2px 5px 2px;
+    }
+}
+
+
 /* || navigatie*/
 
 /* css editProfile Adil */
@@ -467,4 +614,189 @@ input[type=submit]:hover {
 
 
 
+/*log-in*/
 
+* {
+    box-sizing: border-box;
+    font-family: ea-sports;
+}
+
+@font-face {
+    src: url(/fonts/EASPORTS15.ttf);
+    font-family: ea-sports;
+}
+
+html {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background: url(/images/background.jpeg);
+    color: white;
+}
+
+.mb-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+input {
+    width: 40%;
+}
+
+.mb-username {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.mb-password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.mb-vgpasswordlink {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.mb-button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+fieldset {
+    border: none;
+}
+
+.mb-fieldset {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.mb-footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+a {
+    color: white
+}
+
+
+/*eind-log-in*/
+
+
+/*sign-in*/
+
+* {
+    box-sizing: border-box;
+    font-family: ea-sports;
+}
+
+@font-face {
+    src: url(/fonts/EASPORTS15.ttf);
+    font-family: ea-sports;
+}
+
+html {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background: url(/images/background.jpeg);
+    color: white;
+}
+
+.mb-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.mb-head>h1 {
+    margin-bottom: 0;
+}
+
+.mb-head>p {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    width: 40%;
+}
+
+.mb-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.mb-lastname {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.mb-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.mb-password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.mb-bevestigpassword {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.mb-button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mb-footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+a {
+    color: white;
+}
+
+
+/* eind sign-in */

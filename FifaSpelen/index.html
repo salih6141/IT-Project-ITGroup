@@ -5,41 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="HandheldFriendly" content="true">
-    <link rel="stylesheet" href="/css/index_style.css">
-    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="css/root.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 <header>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="settings.html" onclick="closeNav()" id="modalLink">Settings</a>
-        <a id="about" href="about_page.html">About us</a>
-      </div>
-    </div>
+  <div id="mysidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10005;</a>
+    <a id="home" style="text-decoration: underline; text-decoration-color: grey;" href="index.html">Home</a>
+    <a id="settings" href="settings.html">Settings</a>
+    <a id="about" href="about_page.html">About us</a>
+  </div>
     
-      <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776</span>
+  <span id="hamburgermenu" style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776</span>
       
       <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mysidenav").style.width = "250px";
       }
       
       function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mysidenav").style.width = "0";
       }
       </script>
- 
+
     <div class="icon-container">
-        <img class="user-image" src="./images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
+        <img class="user-image" src="images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
     </div>
 </header>
 <body class="index_body">
-    
+    <h1 class="aa-h1">Maak je keuze.</h1>
         <div class="overzicht">
-            <button class="activiteiten">FIFA</button>
-            <button class="activiteiten">THE ONE</button>
+            <button class="activiteiten-fifa" onclick="window.location.href='Spel.html'">FIFA</button>
             <button class="activiteiten">THE ONE</button>
             <button class="activiteiten">CALENDARIFIC</button>
             <button class="activiteiten">TICKETMASTER</button>
@@ -47,10 +45,7 @@
             <button class="activiteiten">LEGOMASTERS</button>
             <button class="activiteiten">BETALINGSYSTEEM</button>
         </div>
-        <footer> <p>&copy;| Adil Ziani - Achraf Ahrirou - Salih Komut - Mamadou Barry | 
-            <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">
-                Privacy & Cookieverklaring</a></p>
-        </footer>
+        <footer id="footer">IT-Project -- Adil Ziani - Achraf Ahrirou - Salih Komut - Mamadou Barry -- <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring</a></footer>
 </body>
 
 </html>

@@ -27,12 +27,15 @@
         document.getElementById("mysidenav").style.width = "0";
       }
 
-      /*nog af te werken mute knop
-      document.getElementById("speaker").click(function(e){
-          e.preventDefault();
-          document.getElementById(this).toggleClass("mute");
-      });
-      */
+      function toggleClass() {
+          document.getElementById("speaker").className = "mute"
+      }
+      
+    //   document.getElementsByClassName("speaker").click(function(e){
+    //       e.preventDefault(); console.log(e, "test")
+    //       document.getElementsByClassName(this).toggleClass("mute");
+    //   });
+    
       </script>   
         <div class="icon-container">
             <img class="user-image" src="images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
@@ -41,7 +44,7 @@
        
     </header>
     <body>
-        <a class="mute-button" href="#" class="speaker">
+        <a  id="speaker" onclick="toggleClass()" href="#" class="speaker">
             <span class="mute-span"></span>
           </a>
         <h1 class="sk-h1-spel"><p class="sk-p-spel">In welke league speelt de club?<br>Selecteer de juiste league.</p></h1> 
