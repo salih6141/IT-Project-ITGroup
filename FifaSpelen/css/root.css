@@ -718,6 +718,32 @@ input {
     justify-content: center;
     margin: 1rem;
 }
+.mb-echt-button{
+    display: flex;
+    position: relative;
+    margin: auto;
+    background-color: rgb(221, 87, 87,0.3);
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: fit-content;
+    height: fit-content;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+.mb-echt-button:hover{
+    color: black;
+    background-color: goldenrod;
+    transition: 0.5s;
+}
 
 fieldset {
     border: none;
