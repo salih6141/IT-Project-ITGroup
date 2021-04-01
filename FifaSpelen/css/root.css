@@ -469,7 +469,7 @@ img {
 .az-h1 {
   font-size: 80px;
   width: 500px;
-  color: white;   
+  color: white;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -514,23 +514,27 @@ option {
 input[type=submit]:hover {
   box-shadow: 0px 0px 3px 3px whitesmoke;
 }
-@media screen and (max-width: 1050px) {
-
-
-    .az-h1 {
-        padding-bottom: 50px;
-        font-size: 30px;
+@media screen and (max-width: 700px) {
+    header {
+        width: 100%;
     }
-    .icon-container {
-        position:absolute;
-        right: 0px;
-        top: 5px;
-        width: 35px;
-        height: 5px;
+    body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    .az-h1 {
+        margin-top: 20px;
+        padding-bottom: 30px;
+        font-size: 30px;
+        width: 100%;
     }
     .az-main-container {
         display: flex;
-        width: 60%;
+        width: 90%;
         margin: 0 auto;
         margin-left: auto;
         margin-right: auto;
@@ -544,6 +548,7 @@ input[type=submit]:hover {
         margin-bottom: 16px;
         resize: vertical;
         color: black;
+        padding-top: 10px;
       }
       input[type=submit] {
         background-color: rgb(221, 87, 87);
@@ -552,10 +557,8 @@ input[type=submit]:hover {
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        width: 28%;
+        width: 35%;
         margin-right: 8px;
-        margin-top: 20px;
-        float: right;
       }
       .az-label {
           color: white;
@@ -566,39 +569,75 @@ input[type=submit]:hover {
       input[type=submit]:hover {
         box-shadow: 0px 0px 3px 3px whitesmoke;
       }
-
+    #footer {
+        display: none;
+     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1050px) {
+    header {
+        width: 100%;
+    }
     body {
         background-image: url("../images/background.jpeg");
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover;
         background-position: center;
         height: 100%;
-        grid-template-columns: 100%;
-        grid-template-rows: 75px 1fr 75px;
-        grid-template-areas:
-        'header'
-        'main'
-        'footer';
-        grid-column-gap: 20px;
-        width: 100%; 
-    }
-    .icon-container {
-        position: relative;
-        right: 0px;
-        top: 5px;
-        width: 35px;
-        height: 5px;
-        float: right;
+        width: 100%;
     }
     .az-h1 {
+        margin-top: 20px;
+        padding-bottom: 30px;
         font-size: 30px;
+        width: 100%;
     }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .az-contact.html {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .az-input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+      }
+      .az-label {
+          color: white;
+      }
+      option {
+        color: black;
+      }
+      input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+      }
     #footer {
         display: none;
      }
 }
+
 
 
 
@@ -808,7 +847,7 @@ html {
 a {
     color: white;
 }
-/* eind sign-in */ 
+/* eind sign-in */
 
 /* settings.css */
 .az-main-settings {
@@ -818,7 +857,7 @@ a {
 }
 .az-flex-container {
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
     justify-content: space-between;
     max-width: 100%;
     height: 100%;
@@ -856,7 +895,7 @@ a {
     filter: drop-shadow(4px 8px 16px #585858)
 }
 .az-settings-box {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -965,10 +1004,10 @@ a {
     padding: 15px;
     width: 100%;
     color: black;
-}   
+}
 .az-fieldset-container input[type=submit] {
     background-color: rgb(221, 87, 87);
-    color: black;
+    color: white;
     padding: 12px 15px;
     border: none;
     border-radius: 4px;
@@ -998,7 +1037,7 @@ a {
         'header'
         'main'
         'footer';
-        grid-column-gap: 20px; 
+        grid-column-gap: 20px;
     }
     .az-feedback-heading-container {
         display: none;
@@ -1021,7 +1060,7 @@ a {
         'header'
         'main'
         'footer';
-        grid-column-gap: 20px; 
+        grid-column-gap: 20px;
     }
     .az-headings-container, .az-flex-container {
         flex-direction: column;
@@ -1030,7 +1069,7 @@ a {
     }
     .az-settings-box {
         border-right: none;
-    }   
+    }
 }
 @media screen and (max-width: 500px) {
     body {
@@ -1046,7 +1085,7 @@ a {
         'main'
         'footer';
         grid-column-gap: 20px;
-        width: 100%; 
+        width: 100%;
     }
     .icon-container {
         position: absolute;
@@ -1116,7 +1155,7 @@ a {
         'main'
         'footer';
         grid-column-gap: 20px;
-        width: 100%; 
+        width: 100%;
     }
     .icon-container {
         position: absolute;
@@ -1186,7 +1225,7 @@ a {
         'main'
         'footer';
         grid-column-gap: 20px;
-        width: 100%; 
+        width: 100%;
     }
     .icon-container {
         position: absolute;
@@ -1245,7 +1284,7 @@ a {
  /* @media screen and (max-width: 450px) {
     body {
         background-image: url("../images/background.jpeg");
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         height: 100%;
@@ -1255,7 +1294,7 @@ a {
         'header'
         'main'
         'footer';
-        grid-column-gap: 20px; 
+        grid-column-gap: 20px;
         width: 60%;
     }
     .heading {
@@ -1284,7 +1323,7 @@ a {
         padding: 15px;
         width: 100%;
         color: black;
-    } 
+    }
     #footer {
         display: none;
     }
