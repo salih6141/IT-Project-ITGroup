@@ -15,6 +15,7 @@
         <header>
             <div class="mb-head">
                 <h1>Log in</h1>
+                <p>druk <a style="color: rgb(221, 87, 87);;" href="/sign-up.html">hier </a>op om een account aan te maken</p>
             </div>
         </header>
 
@@ -22,22 +23,23 @@
             <fieldset class="mb-fieldset">
 
                 <div class="mb-username">
-                    <label class="username-label" for="username">Username</label>
+                    <label for="username">Username</label>
                     <input type="text" id="username" class="mb-username" autofocus required placeholder="username or email">
                 </div>
 
                 <div class="mb-password">
-                    <label class="password-label" for="password">Password</label>
-                    <input type="text" id="password" class="mb-password" required placeholder="password">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="mb-password" required placeholder="password">
                 </div>
+                <a class="mb-vgpasswordlink" href="/wachtwoordvergeten.html">wachtwoord vergeten</a>
 
                 <div class="mb-button">
-                    <button onclick="window.location.href='index.html'" class="login-button" type="submit" name="uc" value="send">Sign In</button>
+                    <button class="mb-echt-button" type="submit" name="uc" value="send">Log In</button>
                 </div>
 
 
             </fieldset>
-            <footer id="footer">
+            <footer>
                 <div class="mb-footer">
                     <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring
                     </a>
