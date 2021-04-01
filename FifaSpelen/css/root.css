@@ -524,7 +524,7 @@ input[type=submit]:hover {
         padding-bottom: 50px;
         font-size: 30px;
     }
-    .icon-container {
+    .icon-container-adil {
         position:absolute;
         right: 0px;
         top: 5px;
@@ -587,7 +587,7 @@ input[type=submit]:hover {
         grid-column-gap: 20px;
         width: 100%; 
     }
-    .icon-container {
+    .icon-container-adil {
         position: relative;
         right: 0px;
         top: 5px;
@@ -1052,7 +1052,7 @@ a {
         grid-column-gap: 20px;
         width: 100%; 
     }
-    .icon-container {
+    .icon-container-adil {
         position: absolute;
         right: 0px;
         top: 5px;
@@ -1122,7 +1122,7 @@ a {
         grid-column-gap: 20px;
         width: 100%; 
     }
-    .icon-container {
+    .icon-container-adil {
         position: absolute;
         right: 0px;
         top: 5px;
@@ -1192,7 +1192,7 @@ a {
         grid-column-gap: 20px;
         width: 100%; 
     }
-    .icon-container {
+    .icon-container-adil {
         position: absolute;
         right: 0px;
         top: 5px;
