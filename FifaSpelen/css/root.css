@@ -203,6 +203,32 @@ img {
         width: 250px;
     }
 }
+.sk-btn-retry{
+    background-color:goldenrod;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: fit-content;
+    height: fit-content;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+.sk-btn-retry:hover{
+    background-color: rgb(221, 87, 87);
+    color: black;
+    transition: 0.5s;
+}
 
 .sk-btn-home {
     background-color: rgb(221, 87, 87, 0.3);
