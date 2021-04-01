@@ -576,16 +576,8 @@ input[type=submit]:hover {
         display: none;
      }
 }
-<<<<<<< HEAD
-@media screen and (max-width: 1050px) {
-    header {
-        width: 100%;
-    }
-    body {
-=======
 @media screen and (max-width: 400px) {
     .body {
->>>>>>> 99521d4f71f33f77ef553835f10e7d6e78a6f00c
         background-image: url("../images/background.jpeg");
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover;
@@ -645,9 +637,6 @@ input[type=submit]:hover {
         display: none;
      }
 }
-
-
-
 
 /* || mb-log-in*/
 
