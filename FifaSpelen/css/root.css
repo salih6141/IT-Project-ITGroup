@@ -514,6 +514,91 @@ option {
 input[type=submit]:hover {
   box-shadow: 0px 0px 3px 3px whitesmoke;
 }
+@media screen and (max-width: 1050px) {
+
+
+    .az-h1 {
+        padding-bottom: 50px;
+        font-size: 30px;
+    }
+    .icon-container {
+        position:absolute;
+        right: 0px;
+        top: 5px;
+        width: 35px;
+        height: 5px;
+    }
+    .az-main-container {
+        display: flex;
+        width: 60%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+      .az-input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+      }
+      input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 28%;
+        margin-right: 8px;
+        margin-top: 20px;
+        float: right;
+      }
+      .az-label {
+          color: white;
+      }
+      option {
+        color: black;
+      }
+      input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+      }
+
+}
+@media screen and (max-width: 400px) {
+    body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 1fr 75px;
+        grid-template-areas:
+        'header'
+        'main'
+        'footer';
+        grid-column-gap: 20px;
+        width: 100%; 
+    }
+    .icon-container {
+        position: relative;
+        right: 0px;
+        top: 5px;
+        width: 35px;
+        height: 5px;
+        float: right;
+    }
+    .az-h1 {
+        font-size: 30px;
+    }
+    #footer {
+        display: none;
+     }
+}
 
 
 
@@ -914,6 +999,12 @@ a {
         'main'
         'footer';
         grid-column-gap: 20px; 
+    }
+    .az-feedback-heading-container {
+        display: none;
+    }
+    .rate-container {
+        display: none;
     }
 }
 @media screen and (max-width: 750px) {
