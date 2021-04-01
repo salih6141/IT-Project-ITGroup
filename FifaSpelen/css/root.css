@@ -140,56 +140,9 @@ img {
     .flex-grid-leagues {
         height: 300px;
     }
-    .speaker {
-        height: 30px;
-        width: 30px;
-        position: relative;
-        overflow: hidden;
-        display: inline-block;
-    }
-    .mute-button {
-        position: fixed;
-        right: 38px;
-        top: 8%;
-    }
-    .mute-span {
-        display: block;
-        width: 8px;
-        height: 8px;
-        background: #fff;
-        margin: 11px 0 0 2px;
-    }
-    .mute-span:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: transparent #fff transparent transparent;
-        border-width: 10px 14px 10px 15px;
-        left: -13px;
-        top: 5px;
-    }
-    .mute-span:before {
-        transform: rotate(45deg);
-        border-radius: 0 50px 0 0;
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        border-style: double;
-        border-color: #fff;
-        border-width: 7px 7px 0 0;
-        left: 18px;
-        top: 9px;
-        transition: all 0.2s ease-out;
-    }
-    .mute-span:hover::before {
-        transform: scale(.8) translate(-3px, 0) rotate(42deg);
-    }
-    .mute:before {
-        transform: scale(.5) translate(-15px, 0) rotate(36deg);
-        opacity: 0;
+    /*footer display none*/
+    #footer{
+        display: none;
     }
 }
 
@@ -202,60 +155,7 @@ img {
     .flex-grid-leagues {
         height: 200px;
     }
-    .speaker {
-        height: 30px;
-        width: 30px;
-        position: relative;
-        overflow: hidden;
-        display: inline-block;
-    }
-    .mute-button {
-        position: fixed;
-        right: 38px;
-        top: 8%;
-    }
-    .mute-span {
-        display: block;
-        width: 8px;
-        height: 8px;
-        background: #fff;
-        margin: 11px 0 0 2px;
-    }
-    .mute-span:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: transparent #fff transparent transparent;
-        border-width: 10px 14px 10px 15px;
-        left: -13px;
-        top: 5px;
-    }
-    .mute-span:before {
-        transform: rotate(45deg);
-        border-radius: 0 50px 0 0;
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        border-style: double;
-        border-color: #fff;
-        border-width: 7px 7px 0 0;
-        left: 18px;
-        top: 9px;
-        transition: all 0.2s ease-out;
-    }
-    .mute-span:hover::before {
-        transform: scale(.8) translate(-3px, 0) rotate(42deg);
-    }
-    .mute ::before {
-        transform: scale(.5) translate(-15px, 0) rotate(36deg);
-        opacity: 0;
-    }
 }
-
-
 /* || sk-spel.html-body */
 
 
@@ -617,7 +517,7 @@ input[type=submit]:hover {
 
 
 
-/*log-in*/
+/* || mb-log-in*/
 
 * {
     box-sizing: border-box;
@@ -669,6 +569,27 @@ html {
     justify-content: center;
     margin: 1rem;
 }
+<<<<<<< HEAD
+=======
+.login-button{
+    background-color: rgb(221, 87, 87,0.3);
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+}
+.login-button:hover{
+    color: black;
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+fieldset {
+    border: none;
+}
+
+>>>>>>> 1f1e33e48f0b8869e8f36d41a8059ad4b9131990
 .mb-fieldset {
     padding: 2rem;
     margin: 1rem;
@@ -679,6 +600,22 @@ html {
     justify-content: center;
     padding: 2rem;
     margin: 1rem;
+}
+@media only screen and (max-width: 600px){
+    .username-label{
+        font-size: 1.4em;
+    }
+    .password-label{
+        font-size: 1.4em;
+    }
+    #username{
+        width: 150px;
+        height: 35px;
+    }
+    #password{
+        width: 150px;
+        height: 35px;
+    }
 }
 
 a {
