@@ -228,6 +228,7 @@ img {
     background-color: rgb(221, 87, 87);
     color: black;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .sk-btn-home {
