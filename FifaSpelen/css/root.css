@@ -718,11 +718,12 @@ input {
     justify-content: center;
     margin: 1rem;
 }
-.mb-echt-button{
+
+.mb-echt-button {
     display: flex;
     position: relative;
     margin: auto;
-    background-color: rgb(221, 87, 87,0.3);
+    background-color: rgb(221, 87, 87, 0.3);
     color: var(--c);
     font-size: 16px;
     border: 0.3em solid var(--c);
@@ -738,11 +739,14 @@ input {
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
+    opacity: 0.5;
 }
-.mb-echt-button:hover{
+
+.mb-echt-button:hover {
     color: black;
     background-color: goldenrod;
     transition: 0.5s;
+    opacity: 1;
 }
 
 fieldset {
