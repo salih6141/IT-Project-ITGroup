@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/editProfile.css">
+    <title>editProfile</title>
+</head>
+<style>
+ /* @media screen and (max-width: 700px) {
+    header {
+        width: 100%;
+    }
+    body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat; /* Do not repeat the image 
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    .az-h1 {
+        margin-top: 20px;
+        padding-bottom: 30px;
+        font-size: 30px;
+        width: 100%;
+    }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+      .az-input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+      }
+      input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+      }
+      .az-label {
+          color: white;
+      }
+      option {
+        color: black;
+      }
+      input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+      }
+    #footer {
+        display: none;
+     }
+} */
+@media screen and (max-width: 400px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+    }
+    .az-h1 {
+        margin-top: 10px;
+        font-size: 30px;
+        width: 100%;
+    }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .az-contact.html {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .az-input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+      }
+      .az-label {
+          color: white;
+      }
+      option {
+        color: black;
+      }
+      input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+      }
+    #footer {
+        display: none;
+     }
+}
+@media screen and (max-width: 450px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+    }
+    .az-h1 {
+
+        font-size: 30px;
+        width: 100%;
+    }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .az-contact.html {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .az-input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+      }
+      .az-label {
+          color: white;
+      }
+      option {
+        color: black;
+      }
+      input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+      }
+    #footer {
+        display: none;
+     }
+}
+@media screen and (max-width: 500px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+    }
+    .icon-container-algemeen {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        width: 35px;
+        height: 5px;
+        padding-right: 10px;
+    }
+    .az-h1 {
+        margin-top: 20px;
+        font-size: 35px;
+        width: 100%;
+    }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .az-contact.html {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .az-input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+      }
+      .az-label {
+          color: white;
+      }
+      option {
+        color: black;
+      }
+      input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+      }
+    #footer {
+        display: none;
+     }
+}
+@media screen and (max-width: 550px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+    }
+    .icon-container-algemeen {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        width: 35px;
+        height: 5px;
+        padding-right: 10px;
+    }
+    .az-h1 {
+        font-size: 30px;
+        width: 100%;
+    }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .az-contact.html {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .az-input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+      }
+      .az-label {
+          color: white;
+      }
+      option {
+        color: black;
+      }
+      input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+      }
+    #footer {
+        display: none;
+     }
+}
+@media screen and (max-width: 650px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+    }
+    .icon-container-algemeen {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        width: 35px;
+        height: 5px;
+        padding-right: 10px;
+    }
+    .az-h1 {
+
+        font-size: 45px;
+        width: 100%;
+    }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .az-contact.html {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .az-input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+      }
+      .az-label {
+          color: white;
+      }
+      option {
+        color: black;
+      }
+      input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+      }
+    #footer {
+        display: none;
+     }
+}
+</style>
+<header>
+  <div id="mysidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10005;</a>
+    <a id="home" href="index.html">Home</a>
+    <a id="settings" href="settings.html">Settings</a>
+    <a id="about" href="about_page.html">About us</a>
+  </div>
+    
+  <span id="hamburgermenu" style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mysidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mysidenav").style.width = "0";
+      }
+      </script>
+       <div class="icon-container-algemeen">
+        <img class="user-image" onclick="window.location.href='editProfile.html'" src="images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
+      </div>
+</header>
+<body>
+    <div>
+        <h1 class="az-h1"><strong>EDIT  PROFILE</strong></h1>
+    </div>
+
+    <main class="az-main-container">
+        <div>
+            <form action="az-contact.html">
+                <label class="az-label" for="fname">Voornaam</label>
+                <input class="az-input" type="text" id="fname" name="voornaam" placeholder="Vul hier uw voornaam in">
+
+                <label class="az-label" for="lname">Familienaam</label>
+                <input class="az-input"  type="text" id="lname" name="lastname" placeholder="Vul hier uw familienaam in">
+
+                <label class="az-label" for="e-mail">E-mail</label>
+                <input class="az-input"  type="text" id="e-mail" name="e-mail" placeholder="fifa-21@hotmail.com">
+
+                <label class="az-label" for="telefoonnummer">Telefoonnummer</label>
+                <input class="az-input"  type="text" id="telefoon" name="telefoon" placeholder="Vul hier uw telefoonnummer in">
+
+                <div class="landkeuze">
+                    <label class="az-label" for="country">Land</label>
+                    <select id="country" name="country">
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Albanië">Albanië</option>
+                        <option value="algerije">Algerije</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Antigua en Barbuda">Antigua en Barbuda</option>
+                        <option value="Argentinië">Argentinië</option>
+                        <option value="Armenië">Armenië</option>
+                        <opton value="Australië">Australië</opton>
+                        <option value="Azerbeidzjan">Azerbeidjan</option>
+                        <option value="Bahama's">Bahama's</option>
+                        <option value="Bahrein">Bahrein</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="België">België</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <opton value="Bolivia">Bolivia</opton>
+                        <option value="Bosnië en Herzegovina">Bosnië en Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Brazilië">Brazilië</option>
+                        <option value="Brunei">Brunei</option>
+                        <option value="Bulgarije">Bulgarije</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cambodja">Cambodja</option>
+                        <option value="Canada">Canada</option>
+                        <opton value="Centraal-Afrikaanse Republiek">Centraal-Afrikaanse Republiek</opton>
+                        <option value="Chili">Chili</option>
+                        <option value="China">China</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoren">Comoren</option>
+                        <option value="Congo-Brazzaville">Congo-Brazaville</option>
+                        <option value="Congo-Kinshasa">Congo-Kinshasa</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <opton value="Denemarken">Denemarken</opton>
+                        <option value="Djiboeti">Djiboeti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominicaanse Republiek">Dominicaanse Republiek</option>
+                        <option value="Duitsland">Duitsland</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypte">Egypte</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatoriaal-Guinea">Equatoriaal-Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <opton value="Estland">Estland</opton>
+                        <option value="Ethiopië">Ethiopië</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Filipijnen">Filipijnen</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Frankrijk">Frankrijk</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gabon</option>
+                        <option value="Georgië">Georgië</option>
+                        <option value="Ghana">Ghana</option>
+                        <opton value="Grenada">Grenada</opton>
+                        <option value="Griekenland[">Griekenland</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guinee">Guinee</option>
+                        <option value="Guinee-Bissau">Guinee-Bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haïti">Haïti</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hongarije">Hongarije</option>
+                        <option value="Ierland">Ierland</option>
+                        <opton value="IJsland">Ijsland</opton>
+                        <option value="India">India</option>
+                        <option value="Indonesië">Indonesië</option>
+                        <option value="Irak">Irak</option>
+                        <option value="Iran">Iran</option>
+                        <option value="Israël">Israël</option>
+                        <option value="Italië">Italië</option>
+                        <option value="Ivoorkust">Ivoorkust</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <opton value="Jemen">Jemen</opton>
+                        <option value="Jordanië">Jordanië</option>
+                        <option value="Kaapverdië">Kaapverdië</option>
+                        <option value="Kameroen">Kameroen</option>
+                        <option value="Kazachstan">Kazachstan</option>
+                        <option value="Kenia">Kenia</option>
+                        <option value="Kirgizië">Kirgizië</option>
+                        <option value="Kiribati">Kirbati</option>
+                        <option value="Koeweit">Koeweit</option>
+                        <option value="Kosovo">Kosovo</option>
+                        <opton value="Kroatië">Kroatië</opton>
+                        <option value="Laos">Laos</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Letland">Letland</option>
+                        <option value="Libanon">Libanon</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libië">Libië</option>
+                        <option value="Liechtenstein">Lichtenstein</option>
+                        <option value="Litouwen">Litouwen</option>
+                        <option value="Luxemburg">Luxemburg</option>
+                        <opton value="Madagaskar">Madagaskar</opton>
+                        <option value="Malawi">Malawi</option>
+                        <option value=" Maldiven">Malediven</option>
+                        <option value="Maleisië">Maleisië</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marokko">Marokko</option>
+                        <option value="Marshalleilanden">Marshalleilanden</option>
+                        <option value="Mauritanië">Mauritanië</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <opton value="Mexico">Mexico</opton>
+                        <option value="Micronesia">Micronesia</option>
+                        <option value="Moldavië">Moldavië</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolië">Mongolië</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibië">Namibië</option>
+                        <option value="Nauru">Nauru</option>
+                        <opton value=" Nederland">Nederland</opton>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Nieuw-Zeeland">Nieuw-Zeeland</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Noord-Korea">Noord-Korea</option>
+                        <option value="Noord-Macedonië">Noord-Macedonië</option>
+                        <option value="Noorwegen">Noorwegen</option>
+                        <option value="Oeganda">Oeganda</option>
+                        <opton value="Oekraïne">Oekraïne</opton>
+                        <option value="Oezbekistan">Oezbekistan</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Oostenrijk">Oostenrijk</option>
+                        <option value="Oost-Timor">Oost-timor</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Palestina">Palestina</option>
+                        <option value="Panama">Panama</option>
+                        <opton value="Papoea-Nieuw-Guinea">Papoea-Nieuw-Guinea</opton>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Polen">Polen</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Roemenië">Roemenië</option>
+                        <option value="Rusland">Rusland</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Kitts en Nevis">Saint Kitts en Nevis</option>
+                        <opton value="Saint Lucia">Saint Lucia</opton>
+                        <option value="Saint Vincent en de Grenadines">Saint Vincent en de Grenadines</option>
+                        <option value="Salomonseilanden">Salomonseilanden</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tomé en Principe">Sao Tomé en Principe</option>
+                        <option value=" Saoedi-Arabië">Saoedi-Arabië</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Servië">Servië</option>
+                        <option value="Seychellen">Seychellen</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <opton value="Singapore">Singapore</opton>
+                        <option value="Slovenië">Slovenië</option>
+                        <option value="Slowakije">Slowakije</option>
+                        <option value="Soedan">Soedan</option>
+                        <option value="Somalië[">Somalië[</option>
+                        <option value="Spanje[">Spanje[</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <opton value="Syrië">Syrië</opton>
+                        <option value="Tadzjikistan">Tadzjikistan</option>
+                        <option value="Tanzania">Tanzania[</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad en Tobago">Trinidad en Tobago[</option>
+                        <option value="Tsjaad">Tsjaad</option>
+                        <option value="Tsjechië">Tsjechië</option>
+                        <option value="Tunesië">Tunesië</option>
+                        <opton value="Turkije">Turkije</opton>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Vaticaanstad[">Vaticaanstad[</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Verenigd Koninkrijk">Verenigd Koninkrijk</option>
+                        <option value="Verenigde Arabische Emiraten">Verenigde Arabische Emiraten</option>
+                        <option value="Verenigde Staten">Verenigde Staten</option>
+                        <opton value="Vietnam">Vietnam</opton>
+                        <option value="Wit-Rusland">Wit-Rusland</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                        <option value="Zuid-Afrika">Zuid-Afrika</option>
+                        <opton value="Zuid-Korea">Zuid-Korea</opton>
+                        <option value="Zuid-Soedan">Zuid-Soedan</option>
+                        <option value="Zweden">Zweden</option>
+                        <option value="Zwitserland">Zwitserland</option>
+                    </select>
+                </div>
+                <input type="submit" value="Cancel">
+                <input type="submit" value="Save">
+            </form>
+    </main>
+
+    <footer id="footer">IT-Project -- Adil Ziani - Achraf Ahrirou - Salih Komut - Mamadou Barry -- <a href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring</a></footer>
+  </body>
+</html>

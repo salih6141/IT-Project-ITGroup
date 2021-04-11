@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-family: ea-sports;
+}
+
+@font-face {
+    src: url(/fonts/EASPORTS15.ttf);
+    font-family: ea-sports;
+}
+
+html {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background: url(/images/background.jpeg);
+    color: white;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 2px solid white;
+    margin: 1rem;
+}
+
+input {
+    width: 40%;
+}
+
+.username {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.vgpasswordlink {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+fieldset {
+    border: none;
+}
+
+.fieldset {
+    border: 2px solid white;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+a {
+    color: white
+}

@@ -1,0 +1,220 @@
+@font-face{
+  src: url(/fonts/EASPORTS15.ttf);
+  font-family:ea-sports;
+}
+
+*{
+    font-family: ea-sports;
+    color: white;
+ }
+
+ /*body*/
+ body {
+  background-image: url("../images/background.jpeg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+ img{
+     max-width: 100%;
+     height: auto;
+     border-radius: 50%;
+ }
+ .icon-container{
+    position: fixed;
+    right: 0px;
+    top: 5px;
+    width: 35px;
+    height: 5px;
+ }
+
+ .user-image{
+    position: relative;
+     width: 100%;
+     height: auto;
+     margin-left: 0%;
+     margin-right: 100%;
+     position: right;
+     top: 8px;
+     right: 16px;
+     border-radius: 50%;
+ }
+ .user-image:hover{
+    box-shadow: 0px 0px 3px 3px whitesmoke;
+ }
+
+ 
+ .sk-container-game{
+  position: relative;
+}
+
+ .sk-h1 {
+    position: relative;
+    color: white;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 150%;
+}
+.club{
+  position: relative;
+  padding: auto;
+  width: auto;
+  height: auto;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+.sk-p{
+    position: relative;
+    text-align: center;
+}
+  .flex-grid-leagues{
+      position: relative;
+      height: auto;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+      padding: 0 10px 0 10px;
+  }
+
+  .sk-btn-endgame{
+    display: flex;
+    position: relative;
+    margin: auto;
+    background-color: rgb(221, 87,87,0.3);
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: fit-content;
+    height: fit-content;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    
+  }
+  .sk-btn-endgame:hover {
+    color: black;
+    background-color: goldenrod;
+}
+@media only screen and (max-width: 600px){
+  .club{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+  .flex-grid-leagues{
+    height: 300px;
+  }
+}
+@media only screen and (max-height: 600px){
+  .club{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
+  .flex-grid-leagues{
+    height: 200px;
+  }
+}
+/*body*/
+
+
+/*navigatie*/
+.sidenav {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgb(64, 64, 64);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  position: absolute;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+#home {
+    top: 20px;
+}
+  #about{
+      text-decoration-line: overline;
+      bottom: 100px;
+  }
+  .sidenav a:hover {
+    color: rgb(221, 87,87);
+  }
+  .closebtn {
+    color: white;
+    position: relative;
+    top: 0%;
+    right: 0%;
+  }
+  @media only screen and (min-width: 600px){
+    #hamburgermenu{
+      display: none
+    }
+    .sidenav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    overflow-x: visible;
+    }
+    .sidenav a{
+      position: absolute;
+      width: 500px;
+      top: 0;
+      display: flex;
+      justify-content: row;
+    }
+    #about{
+      position: absolute;
+      text-decoration: none;
+      top: 0;
+      left: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #home{
+      position: absolute;
+      top: 0;
+      left: 0px;
+    }
+    #settings{
+      position: absolute;
+      top: 0;
+      left: 230px;
+    }
+    .sidenav .closebtn{
+      display: none;
+    }
+    header{
+     box-shadow:grey 0px 2px 5px 2px;
+    }
+  }
+/*navigatie*/
+
+
+
+  
