@@ -63,6 +63,7 @@ img {
 
 
 /* || sk-spel.html-body */
+
 .sk-container-game {
     position: relative;
 }
@@ -140,7 +141,7 @@ img {
         height: 300px;
     }
     /*footer display none*/
-    #footer{
+    #footer {
         display: none;
     }
 }
@@ -155,6 +156,8 @@ img {
         height: 200px;
     }
 }
+
+
 /* || sk-spel.html-body */
 
 
@@ -199,6 +202,33 @@ img {
     .sk-h2 {
         width: 250px;
     }
+}
+.sk-btn-retry{
+    background-color:goldenrod;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: fit-content;
+    height: fit-content;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+.sk-btn-retry:hover{
+    background-color: rgb(221, 87, 87);
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .sk-btn-home {
@@ -465,61 +495,203 @@ img {
 
 /* || navigatie*/
 
+
 /* css editProfile Adil */
+
 .az-h1 {
-  font-size: 80px;
-  width: 500px;
-  color: white;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
+    font-size: 80px;
+    width: 500px;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 }
+
 .az-main-container {
-  display: flex;
-  width: 30%;
-  margin: 0 auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 85px;
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 85px;
 }
-input{
+
+input {
     color: black;
 }
-.az-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  color: black;
+
+.az-input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color: black;
 }
+
 input[type=submit] {
-  background-color: rgb(221, 87, 87);
-  color: black;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 20%;
-  margin-right: 8px;
-  margin-top: 20px;
-  float: right;
+    background-color: rgb(221, 87, 87);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20%;
+    margin-right: 8px;
+    margin-top: 20px;
+    float: right;
 }
+
 .az-label {
     color: white;
 }
+
 option {
-  color: black;
+    color: black;
 }
+
 input[type=submit]:hover {
-  box-shadow: 0px 0px 3px 3px whitesmoke;
+    box-shadow: 0px 0px 3px 3px whitesmoke;
 }
 
+<<<<<<< HEAD
+=======
+@media screen and (max-width: 700px) {
+    header {
+        width: 100%;
+    }
+    body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    .az-h1 {
+        margin-top: 20px;
+        padding-bottom: 30px;
+        font-size: 30px;
+        width: 100%;
+    }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .az-input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+    }
+    .az-label {
+        color: white;
+    }
+    option {
+        color: black;
+    }
+    input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+    }
+    #footer {
+        display: none;
+    }
+}
 
-/* || mb-log-in*/
+@media screen and (max-width: 400px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    .az-h1 {
+        margin-top: 20px;
+        padding-bottom: 30px;
+        font-size: 30px;
+        width: 100%;
+    }
+    .az-main-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .az-contact.html {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .az-input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        color: black;
+        padding-top: 10px;
+    }
+    input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 35%;
+        margin-right: 8px;
+    }
+    .az-label {
+        color: white;
+    }
+    option {
+        color: black;
+    }
+    input[type=submit]:hover {
+        box-shadow: 0px 0px 3px 3px whitesmoke;
+    }
+    #footer {
+        display: none;
+    }
+}
+>>>>>>> 60b4272e57d62fe42b9f3ad6fc34abea01199c55
+
+
+/*log-in*/
 
 * {
     box-sizing: border-box;
@@ -546,6 +718,11 @@ html {
     padding: 2rem;
     margin: 1rem;
 }
+
+input {
+    width: 40%;
+}
+
 .mb-username {
     display: flex;
     flex-direction: column;
@@ -571,25 +748,42 @@ html {
     justify-content: center;
     margin: 1rem;
 }
-.login-button{
-    background-color: rgb(221, 87, 87,0.3);
+
+.mb-echt-button {
+    display: flex;
+    position: relative;
+    margin: auto;
+    background-color: rgb(221, 87, 87, 0.3);
+    color: var(--c);
+    font-size: 16px;
     border: 0.3em solid var(--c);
     border-radius: 0.5em;
+    width: fit-content;
+    height: fit-content;
+    text-transform: uppercase;
     font-weight: bold;
-    width: 150px;
-    height: 30px;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    opacity: 0.5;
 }
-.login-button:hover{
+
+.mb-echt-button:hover {
     color: black;
     background-color: goldenrod;
-    cursor: pointer;
+    transition: 0.5s;
+    opacity: 1;
 }
 
 fieldset {
     border: none;
 }
+
 .mb-fieldset {
-    top: 0px;
     padding: 2rem;
     margin: 1rem;
 }
@@ -600,22 +794,6 @@ fieldset {
     padding: 2rem;
     margin: 1rem;
 }
-@media only screen and (max-width: 600px){
-    .username-label{
-        font-size: 1.4em;
-    }
-    .password-label{
-        font-size: 1.4em;
-    }
-    #username{
-        width: 150px;
-        height: 35px;
-    }
-    #password{
-        width: 150px;
-        height: 35px;
-    }
-}
 
 a {
     color: white
@@ -625,7 +803,7 @@ a {
 /*eind-log-in*/
 
 
-/*sign-in*/
+/*sign-up*/
 
 * {
     box-sizing: border-box;
@@ -662,7 +840,7 @@ html {
     padding: 0;
 }
 
-.input-sign-up {
+input {
     width: 40%;
 }
 
@@ -707,7 +885,11 @@ html {
     margin: 1rem;
 }
 
-.mb-fieldset {
+.mb-echt-button {
+    background-color: rgb(221, 87, 87);
+}
+
+fieldset {
     border: none;
     padding: 2rem;
     margin: 1rem;
@@ -726,14 +908,19 @@ html {
 a {
     color: white;
 }
-/* eind sign-in */
+
+
+/* eind sign-up */
+
 
 /* settings.css */
+
 .az-main-settings {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .az-flex-container {
     display: flex;
     flex-direction: row;
@@ -742,23 +929,28 @@ a {
     height: 100%;
     flex-wrap: wrap;
 }
+
 .az-headings-container {
     display: flex;
     flex-direction: row;
 }
+
 .az-feedback-heading-container {
     width: 50%;
 }
+
 .az-settings-container {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
+
 .az-feedback-container {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
+
 .heading {
     font-style: italic;
     color: white;
@@ -767,21 +959,24 @@ a {
     margin: 50px;
     filter: drop-shadow(4px 8px 16px #585858);
 }
+
 .sub-heading {
     color: white;
     font-size: 18px;
     text-align: center;
     filter: drop-shadow(4px 8px 16px #585858)
 }
+
 .az-settings-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:white;
+    color: white;
     font-size: 38px;
     border-right: 5px solid white;
 }
+
 .az-slidecontainer-volume,
 .az-slidecontainer-verlichting {
     display: flex;
@@ -790,20 +985,25 @@ a {
     margin-bottom: 30px;
     color: white;
 }
-.az-slidecontainer-volume > p,
-.az-slidecontainer-verlichting > p {
+
+.az-slidecontainer-volume>p,
+.az-slidecontainer-verlichting>p {
     margin-bottom: 20px;
 }
+
 .az-settings-form {
     padding-top: 10px;
     color: white;
 }
+
 .az-settings-form label {
     font-size: 20px;
 }
+
 .az-feedback-container {
     padding: 0 10px;
 }
+
 .rate-container {
     display: flex;
     flex-direction: column;
@@ -811,40 +1011,48 @@ a {
     align-items: center;
     margin-bottom: 20px;
 }
+
 .az-settings-heading-container {
     margin-bottom: 20px;
     width: 50%;
 }
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
 }
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
 }
-.rate:not(:checked) > label:before {
+
+.rate:not(:checked)>label:before {
     content: '★ ';
 }
-.rate > input:checked ~ label {
-    color: rgb(221, 87,87);
+
+.rate>input:checked~label {
+    color: rgb(221, 87, 87);
 }
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: rgb(221, 87,87);
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: rgb(221, 87, 87);
 }
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: rgb(221, 87,87);
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: rgb(221, 87, 87);
 }
+
 .az-form-feedback {
     display: flex;
     flex-direction: column;
@@ -853,10 +1061,12 @@ a {
     font-size: 20px;
     width: auto;
 }
+
 .az-form-feedback label {
     font-size: 25px;
     width: 50%;
 }
+
 .az-email-field {
     display: flex;
     flex-direction: column;
@@ -865,6 +1075,7 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 .az-form-feedback input {
     width: 50%;
     padding: 12px;
@@ -875,15 +1086,18 @@ a {
     resize: vertical;
     color: black;
 }
+
 .az-fieldset-container {
     padding-top: 10px;
     width: 50%;
 }
+
 .az-fieldset-container textarea {
     padding: 15px;
     width: 100%;
     color: black;
 }
+
 .az-fieldset-container input[type=submit] {
     background-color: rgb(221, 87, 87);
     color: white;
@@ -895,27 +1109,285 @@ a {
     margin-top: 20px;
     float: right;
 }
+
 .az-fieldset-container input[type=submit]:hover {
     box-shadow: 0px 0px 3px 3px whitesmoke;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 400px) {
     .body {
         background-repeat: no-repeat; /* Do not repeat the image */ 
+=======
+@media screen and (max-width: 900px) {
+    .az-fieldset-container input[type=submit] {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
         background-size: cover;
         background-position: center;
         height: 100%;
         grid-template-columns: 100%;
         grid-template-rows: 75px 1fr 75px;
-        grid-template-areas:
-        'header'
-        'main'
-        'footer';
+        grid-template-areas: 'header' 'main' 'footer';
         grid-column-gap: 20px;
+    }
+    .az-feedback-heading-container {
+        display: none;
+    }
+    .rate-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    /* Hier moet je alles onder elkaar zien te krijgen... */
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 1fr 75px;
+        grid-template-areas: 'header' 'main' 'footer';
+        grid-column-gap: 20px;
+    }
+    .az-headings-container,
+    .az-flex-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .az-settings-box {
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 1fr 75px;
+        grid-template-areas: 'header' 'main' 'footer';
+        grid-column-gap: 20px;
+        width: 100%;
+    }
+    .icon-container {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        width: 35px;
+        height: 5px;
+    }
+    .heading {
+        font-size: 30px;
+    }
+    .sub-heading {
+        font-size: 11px;
+    }
+    .az-settings-box {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    h3 {
+        font-size: 11px;
+    }
+    .az-settings-form {
+        padding-bottom: 20px;
+    }
+    .az-email-field {
+        width: 138%;
+        padding-bottom: 10px;
+    }
+    .az-email-field input {
+        width: 100%;
+    }
+    .az-email-field label {
+        width: 99%;
+    }
+    .az-fieldset-container {
+        padding-top: 10px;
+        width: 150%;
+    }
+    .az-fieldset-container textarea {
+        padding: 15px;
+        width: 100%;
+        color: black;
+    }
+    .az-fieldset-container input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 4px;
+        width: 35%;
+    }
+    #footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 1fr 75px;
+        grid-template-areas: 'header' 'main' 'footer';
+        grid-column-gap: 20px;
+        width: 100%;
+    }
+    .icon-container {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        width: 35px;
+        height: 5px;
+    }
+    .heading {
+        font-size: 30px;
+    }
+    .sub-heading {
+        font-size: 11px;
+    }
+    .az-settings-box {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    h3 {
+        font-size: 11px;
+    }
+    .az-settings-form {
+        padding-bottom: 20px;
+    }
+    .az-email-field {
+        width: 138%;
+        padding-bottom: 10px;
+    }
+    .az-email-field input {
+        width: 100%;
+    }
+    .az-email-field label {
+        width: 99%;
+    }
+    .az-fieldset-container {
+        padding-top: 10px;
+        width: 150%;
+    }
+    .az-fieldset-container textarea {
+        padding: 15px;
+        width: 100%;
+        color: black;
+    }
+    .az-fieldset-container input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 4px;
+        width: 40%;
+    }
+    #footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body {
+        background-image: url("../images/background.jpeg");
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+>>>>>>> 60b4272e57d62fe42b9f3ad6fc34abea01199c55
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 1fr 75px;
+        grid-template-areas: 'header' 'main' 'footer';
+        grid-column-gap: 20px;
+<<<<<<< HEAD
     }
 }
     
  /* @media screen and (max-width: 450px) {
+=======
+        width: 100%;
+    }
+    .icon-container {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        width: 35px;
+        height: 5px;
+    }
+    .heading {
+        font-size: 30px;
+    }
+    .sub-heading {
+        font-size: 11px;
+    }
+    .az-settings-box {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    h3 {
+        font-size: 11px;
+    }
+    .az-settings-form {
+        padding-bottom: 20px;
+    }
+    .az-email-field {
+        width: 138%;
+        padding-bottom: 10px;
+    }
+    .az-email-field input {
+        width: 100%;
+    }
+    .az-email-field label {
+        width: 99%;
+    }
+    .az-fieldset-container {
+        padding-top: 10px;
+        width: 150%;
+    }
+    .az-fieldset-container textarea {
+        padding: 15px;
+        width: 100%;
+        color: black;
+    }
+    .az-fieldset-container input[type=submit] {
+        background-color: rgb(221, 87, 87);
+        color: white;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 4px;
+        width: 45%;
+    }
+    #footer {
+        display: none;
+    }
+}
+
+
+/* @media screen and (max-width: 450px) {
+>>>>>>> 60b4272e57d62fe42b9f3ad6fc34abea01199c55
     body {
         background-image: url("../images/background.jpeg");
         background-repeat: no-repeat;
