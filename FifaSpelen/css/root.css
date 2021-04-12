@@ -273,7 +273,7 @@ img {
 
 .overzicht {
     margin: auto;
-    margin-top: 10%;
+    margin-top: 50px;
     width: fit-content;
     height: fit-content;
     padding: 10px;
@@ -995,6 +995,11 @@ a {
 
 .az-settings-form label {
     font-size: 20px;
+    margin-left: 3em;
+    display: block;
+    position: relative;
+    margin-top: -1.4em;  /* make this margin match whatever your line-height is */
+    line-height: 1.4em;
 }
 
 .az-feedback-container {
@@ -1067,7 +1072,7 @@ a {
 .az-email-field {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     text-align: flex-start;
     justify-content: center;
     align-items: center;

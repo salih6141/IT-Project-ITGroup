@@ -46,30 +46,30 @@ body {
 .user-image:hover {
     box-shadow: 0px 0px 3px 3px whitesmoke;
 }
-h1 {
-    margin-top: 50px;
-    font-size: 100px;
-}
-h2 {
-    margin-top: 5px;
-    font-size: 20px;
-    margin-bottom: 30px;
-    filter: drop-shadow(4px 8px 16px #585858);
-}
-.mb-fieldset {
-    margin: auto;
-    width: 15%;
-    border: 3px solid white;
-    padding: 10px;
-    text-align: center;
-    background-color: whitesmoke;
-}
-.mb-head {
+.signUp-head {
     justify-content: center;
     text-align: center;
 }
-.mb-input, select, textarea {
-    width: 100%;
+h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+h2 {
+    font-size: 15px;
+}
+a:hover {
+    color: rgb(221, 87, 87);
+}
+.input-container {
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+.az-input, select, textarea {
+    width: 40%;
     padding: 12px;
     border-radius: 4px;
     box-sizing: border-box;
@@ -78,37 +78,30 @@ h2 {
     resize: vertical;
     color: black;
   }
-  .mb-checkbox{
-    color: black;
-    font-size: 14px;
-    font-family: italic;
-    padding-left: 5px;
-  }
-  .mb-button {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  input[type=submit] {
-    background-color: rgb(221, 87, 87);
-  }
-  #forgot {
-    color: black;
-    font-size: 10px;
-  }
-  .mb-create-button {
+.az-label {
+    margin: 3px;
+    display: block;
+}
+.register-button {
     padding-top: 10px;
     text-align: center;
-  }
-  .color-button {
-      background-color: rgb(221, 87, 87);
-      width: 16%;
-      padding: 14px 28px;
-      font-size: 16px;
-      cursor: pointer;
-      
-  }
-  .color-button:hover {
-    box-shadow: 0px 0px 3px 3px whitesmoke;
-  }
-
-
+}
+.color-register-button {
+    background-color: rgb(221, 87, 87);
+    width: 16%;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    justify-content: center;
+    text-align: center;
+    color: white;
+ }
+ #footer :hover{
+  color: rgb(221, 87, 87);
+}

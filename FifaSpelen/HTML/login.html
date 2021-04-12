@@ -9,32 +9,44 @@
     <title>Log-In</title>
 </head>
 <header>
-    <div class="mb-head">
-        <h1>FIFA</h1>
-        <h2>20/21</h2>
-        <h2>Play like a boss</h2>
-    </div>
+    <a id="home" href="index.html">Home</a>
+    <div class="icon-container-algemeen">
+        <img class="user-image" onclick="window.location.href='editProfile.html'" src="../images/computer-icons-user-profile-avatar-profile-thumbnail-removebg-preview-removebg-preview.png" alt="Klik om profiel te bekijken/bewerken">
+      </div>
 </header>
 
 <body>
+    <div class="mb-head">
+        <h1>FIFA</h1>
+        <h2>20/21</h2>
+        <h2><em>Play like a boss</em></h2>
+    </div>
     <div>
         <fieldset class="mb-fieldset">
             <div class="mb-middle-container">
-                <div class="mb-username">
-                    <label class="username-label" for="username"></label>
-                    <input type="text" id="username" class="mb-username" autofocus required placeholder="username or email">
-                </div>
 
-                <div class="mb-password">
-                    <label class="password-label" for="password"></label>
-                    <input type="text" id="password" class="mb-password" required placeholder="password">
-                </div>
+                <label class="mb-label" for="fname"></label>
+                <input class="mb-input" type="text" id="username" name="username" placeholder="Gebruikersnaam">
 
+                <label class="mb-label" for="password"></label>
+                <input class="mb-input" type="text" id="password" name="password" placeholder="Wachtwoord">
+
+                <div>
+                <input type="checkbox" id="logging" name="logging" value="Legendarisch">
+                <label class="mb-checkbox" for="level">Ik wil ingelogd blijven</label>
+                </div>
+                
                 <div class="mb-button">
-                    <button onclick="window.location.href='index.html'" class="login-button" type="submit" name="uc" value="send">Sign In</button>
+                    <input type="submit" value="Log in" onclick="window.location.href='index.html' ">
                 </div>
+
+                <a id="forgot" href="../HTML/editProfile.html">Log in of wachtwoord vergeten?</a>
             </div>
         </fieldset>>
+
+        <div class="mb-create-button">
+            <button class="color-button" onclick="window.location.href='sign up.html' ">Maak een account aan...</button>
+        </div>
 
     </div>
 </body>
