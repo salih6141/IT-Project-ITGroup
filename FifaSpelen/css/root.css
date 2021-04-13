@@ -550,7 +550,12 @@ textarea {
     resize: vertical;
     color: black;
 }
-
+.landkeuze{
+    width: 100%;
+}
+.select-land {
+    width: 100%;
+}
 .az-submit {
     background-color: rgb(221, 87, 87);
     color: white;
