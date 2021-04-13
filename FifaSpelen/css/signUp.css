@@ -7,31 +7,31 @@
     color: white;
     margin: 0;
 }
-html, body {
+.signUp-html, .mb-signUp-body {
     height: 100%;
 }
-body {
+.mb-signUp-body {
     background-image: url("../images/log_in.jpg");
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
     background-position: center;
     height: 100%;
 }
-#home {
+.mb-a {
     margin-left: 20px;
     position:relative;
     top: 10px;
     font-size: 20px;
 }
-.icon-container-algemeen {
+.mb-icon-container-algemeen {
     position: fixed;
     right: 0px;
-    top: 5px;
+    top: 10px;
     width: 35px;
     height: 5px;
 }
 
-.user-image {
+.mb-user-image {
     position: relative;
     width: 100%;
     height: auto;
@@ -43,32 +43,32 @@ body {
     border-radius: 50%;
 }
 
-.user-image:hover {
+.mb-user-image:hover {
     box-shadow: 0px 0px 3px 3px whitesmoke;
 }
-.signUp-head {
+.mb-signUp-head {
     justify-content: center;
     text-align: center;
 }
-h1 {
+.signUp-h1 {
     padding-top: 50px;
     padding-bottom: 10px;
     font-size: 50px;
 }
-h2 {
+.signUp-h2 {
     font-size: 15px;
 }
-a:hover {
+.mb-a:hover {
     color: rgb(221, 87, 87);
 }
-.input-container {
+.mb-input-container {
     margin: auto;
     width: 50%;
     padding: 15px;
     margin-top: 40px;
     text-align: center;
 }
-.az-input, select, textarea {
+.mb-input, select, textarea {
     width: 40%;
     padding: 12px;
     border-radius: 4px;
@@ -78,15 +78,15 @@ a:hover {
     resize: vertical;
     color: black;
   }
-.az-label {
+.mb-label {
     margin: 3px;
     display: block;
 }
-.register-button {
+.mb-register-button {
     padding-top: 10px;
     text-align: center;
 }
-.color-register-button {
+.mb-color-register-button {
     background-color: rgb(221, 87, 87);
     width: 16%;
     padding: 14px 28px;

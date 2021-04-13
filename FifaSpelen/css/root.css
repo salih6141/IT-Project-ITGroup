@@ -76,6 +76,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     font-size: 150%;
+    padding-top: 30px;
 }
 
 .club {
@@ -85,6 +86,7 @@ img {
     height: auto;
     margin-left: 45%;
     margin-right: 45%;
+    padding-top: 40px;
 }
 
 .sk-p-spel {
@@ -102,6 +104,7 @@ img {
     justify-content: space-between;
     margin: auto;
     padding: 0 10px 0 10px;
+    padding-top: 130px;
 }
 
 .sk-btn-endgame {
@@ -124,10 +127,11 @@ img {
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
+    margin-top: 40px;
 }
 
 .sk-btn-endgame:hover {
-    color: black;
+    color: white;
     background-color: goldenrod;
 }
 
@@ -172,7 +176,19 @@ img {
     flex-direction: column;
 }
 
-.sk-h1,
+.sk-h1 {
+    position: relative;
+    width: auto;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 80px;
+}
 .sk-h2 {
     position: relative;
     width: auto;
@@ -251,6 +267,7 @@ img {
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
+    margin-top: 20px;
 }
 
 .sk-btn-home:hover {
@@ -505,7 +522,7 @@ img {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .az-main-container {
@@ -514,7 +531,7 @@ img {
     margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 85px;
+    margin-top: 50px;
 }
 
 input {
@@ -534,9 +551,9 @@ textarea {
     color: black;
 }
 
-input[type=submit] {
+.az-submit {
     background-color: rgb(221, 87, 87);
-    color: black;
+    color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -634,8 +651,8 @@ input[type=submit]:hover {
     }
     .az-h1 {
         margin-top: 20px;
-        padding-bottom: 30px;
-        font-size: 30px;
+        padding-bottom: 20px;
+        font-size: 10px;
         width: 100%;
     }
     .az-main-container {
@@ -689,224 +706,239 @@ input[type=submit]:hover {
 
 
 /*log-in*/
-
-* {
-    box-sizing: border-box;
-    font-family: ea-sports;
-}
-
-@font-face {
+@font-face{
     src: url(/fonts/EASPORTS15.ttf);
     font-family: ea-sports;
 }
-
-html {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    background: url(../images/log_in.jpg);
+*{
+    font-family: ea-sports; 
     color: white;
+    margin: 0;
+    
+}
+.mb-html {
+    height: 100%;
+}
+.mb-body {
+    background-image: url("../images/log_in.jpg");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.mb-home {
+    margin-left: 20px;
+    position:relative;
+    top: 10px;
+    font-size: 20px;
+}
+.mb-icon-container-algemeen {
+    position: fixed;
+    right: 0px;
+    top: 5px;
+    width: 35px;
+    height: 5px;
 }
 
-.mb-head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    margin: 1rem;
-}
-
-input {
-    width: 40%;
-}
-
-.mb-username {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-}
-
-.mb-password {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-}
-
-.mb-vgpasswordlink {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-}
-
-.mb-button {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-}
-
-.mb-echt-button {
-    display: flex;
+.mb-user-image {
     position: relative;
-    margin: auto;
-    background-color: rgb(221, 87, 87, 0.3);
-    color: var(--c);
-    font-size: 16px;
-    border: 0.3em solid var(--c);
-    border-radius: 0.5em;
-    width: fit-content;
-    height: fit-content;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: sans-serif;
-    letter-spacing: 0.1em;
-    text-align: center;
-    line-height: 3em;
-    overflow: hidden;
-    z-index: 1;
-    transition: 0.5s;
-    opacity: 0.5;
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
+    margin-right: 100%;
+    position: right;
+    top: 8px;
+    right: 16px;
+    border-radius: 50%;
+}
+.mb-header {
+    box-shadow: none;
 }
 
-.mb-echt-button:hover {
-    color: black;
-    background-color: goldenrod;
-    transition: 0.5s;
-    opacity: 1;
+.mb-user-image:hover {
+    box-shadow: 0px 0px 3px 3px whitesmoke;
 }
-
-fieldset {
-    border: none;
+.h1-login {
+    margin-top: 50px;
+    font-size: 100px;
 }
-
+.h2-login {
+    margin-top: 5px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    filter: drop-shadow(4px 8px 16px #585858);
+}
 .mb-fieldset {
-    padding: 2rem;
-    margin: 1rem;
+    margin: auto;
+    width: 15%;
+    border: 3px solid white;
+    padding: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
 }
-
-.mb-footer {
-    display: flex;
+.mb-head {
     justify-content: center;
-    padding: 2rem;
-    margin: 1rem;
+    text-align: center;
 }
-
-a {
-    color: white
-}
+.mb-input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color: black;
+  }
+  .mb-checkbox{
+    color: black;
+    font-size: 14px;
+    font-family: italic;
+    padding-left: 5px;
+  }
+  .mb-button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .mb-submit {
+    background-color: rgb(221, 87, 87);
+  }
+  #forgot {
+    color: black;
+    font-size: 10px;
+  }
+  .mb-create-button {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .mb-color-button {
+      background-color: rgb(221, 87, 87);
+      width: 16%;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      
+  }
+  .mb-color-button:hover {
+    box-shadow: 0px 0px 3px 3px whitesmoke;
+  }
 
 
 /*eind-log-in*/
 
 
 /*sign-up*/
-
-* {
-    box-sizing: border-box;
-    font-family: ea-sports;
-}
-
-@font-face {
+@font-face{
     src: url(/fonts/EASPORTS15.ttf);
     font-family: ea-sports;
 }
-
-html {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    background: url(/images/background.jpeg);
+*{
+    font-family: ea-sports; 
     color: white;
-}
-
-.mb-head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    margin: 1rem;
-}
-
-.mb-head>h1 {
-    margin-bottom: 0;
-}
-
-.mb-head>p {
     margin: 0;
-    padding: 0;
+}
+.signUp-html, .mb-signUp-body {
+    height: 100%;
+}
+.mb-signUp-body {
+    background-image: url("../images/log_in.jpg");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+.mb-a {
+    margin-left: 20px;
+    position:relative;
+    top: 10px;
+    font-size: 20px;
+}
+.mb-icon-container-algemeen {
+    position: fixed;
+    right: 0px;
+    top: 10px;
+    width: 35px;
+    height: 5px;
 }
 
-input {
+.mb-user-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-left: 0%;
+    margin-right: 100%;
+    position: right;
+    top: 8px;
+    right: 16px;
+    border-radius: 50%;
+}
+
+.mb-user-image:hover {
+    box-shadow: 0px 0px 3px 3px whitesmoke;
+}
+.mb-signUp-header {
+    box-shadow: none;
+}
+.mb-signUp-head {
+    justify-content: center;
+    text-align: center;
+}
+.signUp-h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+.signUp-h2 {
+    font-size: 15px;
+}
+.mb-a:hover {
+    color: rgb(221, 87, 87);
+}
+.mb-input-container {
+    margin: auto;
+    width: 55%;
+    padding: 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+.mb-input, select, textarea {
     width: 40%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color: black;
+  }
+.mb-label {
+    margin: 3px;
+    display: block;
 }
-
-.mb-name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
+.mb-register-button {
+    padding-top: 10px;
+    text-align: center;
 }
-
-.mb-lastname {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-}
-
-.mb-email {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-}
-
-.mb-password {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-}
-
-.mb-bevestigpassword {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-}
-
-.mb-button {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-}
-
-.mb-echt-button {
+.mb-color-register-button {
     background-color: rgb(221, 87, 87);
+    width: 16%;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
 }
-
-fieldset {
-    border: none;
-    padding: 2rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
     justify-content: center;
-}
-
-.mb-footer {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    margin: 1rem;
-}
-
-a {
+    text-align: center;
     color: white;
+ }
+ #footer :hover{
+  color: rgb(221, 87, 87);
 }
-
-
 /* eind sign-up */
 
 
@@ -995,7 +1027,7 @@ a {
 
 .az-settings-form label {
     font-size: 20px;
-    margin-left: 3em;
+    margin-left: 2em;
     display: block;
     position: relative;
     margin-top: -1.4em;  /* make this margin match whatever your line-height is */
