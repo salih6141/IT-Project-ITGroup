@@ -298,3 +298,13 @@ main {
 #footer :hover{
 color: rgb(221, 87, 87);
 }
+
+
+/* Nieuwe stijlen met bootstrap */
+.az-level-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  color: white;
+}
