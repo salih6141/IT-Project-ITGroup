@@ -44,19 +44,19 @@
     <div class="row">
       <form action="" method="POST">
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="email" placeholder="John">
+          <input type="email" class="form-control" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
           <label class="label-signup" for="email">Email address</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="username" placeholder="John">
+          <input type="text" class="form-control" id="username" name="username">
           <label class="label-signup" for="username">Username</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="password" class="form-control" id="password" placeholder="Password">
+          <input type="password" class="form-control" id="password" name="password">
           <label class="label-signup" for="password">Password</label>
         </div>
         <div class="form-floating mb-4">
-          <input type="password" class="form-control" id="re-password" placeholder="Password">
+          <input type="password" class="form-control" id="re-password" name="confirm password">
           <label class="label-signup" for="re-password">Confirm password</label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
