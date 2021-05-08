@@ -5,79 +5,98 @@ require("dotenv").config();
 const app = express();
 
 // middleware
-app.set("port", process.env.PORT || 8088);
+app.set("port", process.env.PORT || 3000);
 app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false})); 
 
-// Data ophalen
-const getClubs = async(array) => {
+// DATA
+const data = { clubs: [], leagues: [] };
+
+// functie voor afbeeldingen (van clubs) op te halen
+const getImage = async(clubId) => {
   try {
-    console.log("clubs worden opgehaald...")
+    let response = await fetch(`https://futdb.app/api/clubs/5/image`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "image/png",
+        "X-AUTH-TOKEN": process.env.API_TOKEN,
+      },
+    });
+    let result = await response.arrayBuffer();
+    // omvormen naar base64 (enkel zo kunnen we afbeelding tonen)
+    let image = new Buffer(result).toString('base64');
+    return image;
+  } catch (error) {
+    console.log(error)
+  }
+};
+
+// functie voor eerste 20 clubs op te halen, deze worden opgeslagen in een array die wordt gestuurd naar de frontend
+const getClubs = async() => {
+  try {
     // deze request zal 20 clubs terugsturen, zolang zal een speelbeurt duren
     let response = await fetch("https://futdb.app/api/clubs", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-AUTH-TOKEN": "3338e8d6-7c86-4779-9ae0-e9b46804be06"
+        "X-AUTH-TOKEN": process.env.API_TOKEN
       },
-      mode: "no-cors"
     });
     let result = await response.json();
-    array = result.items;
+    data.clubs = await Promise.all(result.items.map(async(club) => {
+      club.image = await getImage(club.id);
+      return club;
+    }));
   } catch (error) {
-    throw error;
+    console.log(error)
   }
-}
-let clubs = [];
-getClubs(clubs);
+} 
+getClubs()
 
-const getLeagues = async(array) => {
+//functie voor alle leagues op te halen, die slaan we op in een array en sturen we naar de frontend 
+const getLeagues = async() => {
+  let array = [];
   try {
-    console.log("leagues worden opgehaald...")
-    // eerste request voor pagina 1
+    // eerste request voor de leagues van pagina 1 te krijgen (20, in totaal zijn er 48)
     let response = await fetch('https://futdb.app/api/leagues', {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "X-AUTH-TOKEN": "3338e8d6-7c86-4779-9ae0-e9b46804be06"
+        "X-AUTH-TOKEN": process.env.API_TOKEN
       },
-      mode: "no-cors"
     });
+    // de eerste 20 leagues
     let result = await response.json();
-    // da al opslaan in de array
-    array.push(...result.items);
-    // loopen over aantal pagina's en voor elke pagina terug request doen en opslaan in array
+    if (result !== undefined)
+      array.push(...result.items);
+
+    // loopen over het aantal pagina's en voor elke pagina terug request doen en bijsteken in array
     for (let i = 2; i <= result.page_total; i++) {
-      let response = await fetch(`https://futdb.app/api/leagues?page=${i}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "X-AUTH-TOKEN": "3338e8d6-7c86-4779-9ae0-e9b46804be06"
-      },
-      mode: "no-cors"
-    });
-      let result = await response.json();
-      array.push(...result.items) 
+      try {
+        let response = await fetch(`https://futdb.app/api/leagues?page=${i}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "X-AUTH-TOKEN": process.env.API_TOKEN
+          },
+        });
+        let result = await response.json();
+        array.push(...result.items);
+      } catch (error) {
+        console.log("er is een error")
+        console.log(error)
+      } 
     }
+    data.leagues = array;
   } catch (error) {
-    throw error;
+    console.log(error)
   }
 }
-let leagues = [];
-getLeagues(leagues);
+getLeagues();
 
-// const getImage = async(club) => {
-//   try {
-//     let result = await fetch('https://futdb.app/api/clubs/1/image', fetchConfig("image/png"));
-//     console.log(result)
-//     return image;  
-//   } catch (error) {
-//     throw error;
-//   }
-// };
 
 /* Het renderen van de pagina's */ 
 app.get("/", async(req, res) => {
@@ -96,9 +115,10 @@ app.get("/register", async(req, res) => {
   res.render("register");
 })
 app.get("/spel", async(req, res) => {
+  // console.log(data)
   res.render("spel", {
-    clubs: JSON.stringify(clubs),
-    leagues: JSON.stringify(leagues)
+    clubs: JSON.stringify(data.clubs),
+    leagues: JSON.stringify(data.leagues),
   });
 })
 app.get("/score", async(req, res) => {
@@ -123,6 +143,6 @@ app.listen(app.get("port"), (error) => {
       console.log('Something went wrong: ' + error)
   }
   else {
-      console.log(`Server started on http://localhost:${app.get("port")}; press Ctrl-C to terminate.`)
+    console.log(`Server started on http://localhost:${app.get("port")}; press Ctrl-C to terminate.`)
   }
 })
