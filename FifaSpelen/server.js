@@ -18,7 +18,7 @@ const data = { clubs: [], leagues: [] };
 // functie voor afbeeldingen (van clubs) op te halen
 const getImage = async(clubId) => {
   try {
-    let response = await fetch(`https://futdb.app/api/clubs/5/image`, {
+    let response = await fetch(`https://futdb.app/api/clubs/${Math.random()*797}/image`, {
       method: "GET",
       headers: {
         "Content-Type": "image/png",
