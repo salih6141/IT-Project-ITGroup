@@ -1,10 +1,7 @@
-@font-face {
-  src: url("../fonts/EASPORTS15.ttf");
-  font-family: ea-sports;
-}
+
 * {
 box-sizing: border-box;
-font-family: ea-sports; 
+font-family: Arial, Helvetica, sans-serif; 
 color: #EDEDED;
 margin: 0;
 }
