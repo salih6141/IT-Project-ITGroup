@@ -38,8 +38,11 @@
     <div class="container">
       <h1 id="question" class="text-center mb-3 mt-5"><!-- via JS --></h1>
       <!-- via javascript wordt hier een afbeelding getoond -->
-      <div id="image-container" class="image-container">
+      <div id="image-container">
         <img id="club-image" src="" draggable="true" ondragstart="drag(event)" />
+      </div>
+      <div id="score-container">
+        <span id="score"><!-- via JS -->1</span>
       </div>
       <!-- via JS zal er hier feedback komen -->
       <div class="spel-feedback-container text-center mt-5" hidden>
@@ -48,27 +51,45 @@
       </div>
     </div>
     
-    <div class="container mt-5 mb-auto flex-parent">
+    <div class="image-container-parent container mt-5 mb-auto flex-parent">
       <!-- 3 containers naast elkaar -->
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div class="league-container" ondragover="allowDrop(event)">
         <div class="league-body"></div>
         <div class="league-text">
           <p><!-- via javascript komt hier de naam van de league --></p>
         </div>
       </div>
-      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div class="league-container" ondragover="allowDrop(event)">
         <div class="league-body"></div>
         <div class="league-text">
           <p><!-- via javascript komt hier de naam van de league --></p>
         </div>
       </div>
-      <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div class="league-container" ondragover="allowDrop(event)">
         <div class="league-body"></div>
         <div class="league-text">
           <p><!-- via javascript komt hier de naam van de league --></p>
         </div>
       </div>
     </div>
+
+    <!-- select-input voor nog 3 andere clubs te raden van een bepaalde league -->
+    <div class="club-select-container" hidden>
+      <form id="clubs-form" action="/spel" method="get">
+        <fieldset>
+          <select id="clubs-select" class="form-select form-select-lg mb-3" size="6" multiple>
+            <% clubs.forEach(club => { %>
+              <option value="<%= club.name %>"><%= club.name %></option>
+            <% }); %>
+          </select>
+          <div class="invalid-feedback">
+            Please select three clubs
+          </div>
+          <button id="threeLeaguesBtn" type="submit" class="btn btn-primary mt-3">Send</button>
+        </fieldset>
+      </form>
+    </div>
+
     <button id="stopBtn" type="button" class="btn btn-primary mt-5" style="width: 50%;">Stop playing</button>
   </main>
 
@@ -79,10 +100,11 @@
   </footer>
 
   <script>
-    let clubs = <%- clubs %>;
+    let clubs = <%- clubsStringified %>;
     let leagues = <%- leagues %>;
   </script>
   <script src="js/spel.js"></script>
+  <script src="js/getdata.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-</html>
+  </html>
 

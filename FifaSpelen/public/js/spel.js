@@ -1,10 +1,15 @@
-let playing = true;
 let attempts = 0;
+let score = 0;
 let round = 0;
+
 let questionEl = document.getElementById("question");
 let imageParent = document.getElementById("image-container");
 let imageEl = document.getElementById("club-image");
+let imagesContainerEl = document.querySelector(".image-container-parent");
 let feedbackEl = document.querySelector(".spel-feedback-container");
+let selectContainerEl = document.querySelector(".club-select-container");
+
+let club = {}
 
 // functies om drag en drop toe te kunnen passen:
 function allowDrop(e) {
@@ -13,72 +18,26 @@ function allowDrop(e) {
 function drag(e) {
   e.dataTransfer.setData("text", e.target.id);
 }
-function drop(e) {
-  e.preventDefault();
-  console.log("attempts: " + attempts)
-  let data = e.dataTransfer.getData("text");
-  e.target.appendChild(document.getElementById(data));
 
-  // antwoord checken 
-  let correctLeague = leagues.find((league) => league.id === clubs[round].league);
-  let leagueName = correctLeague.name.substring(0, correctLeague.name.length - 3); // remove numbering from API
-  let league = leagueName.replace(/\s+/g, ''); // remove spaces 
-  let received = e.target.nextElementSibling.children[0].innerText.replace(/\s+/g, ''); // remove spaces
+// START HET SPEL
+playGame()
 
-  if (league === received) {
-    showFeedback("success", leagueName);
-
-  } else {
-    showFeedback("fail", leagueName);
-  }
-}
-
-function endRound() {
+async function playGame() {
   attempts = 0;
-  setTimeout(() => {
-    round++;
-    console.log("round: " + round)
-    feedbackEl.hidden = true;
-    document.querySelector(".image-container").style.display = "";
-    if (playing) {
-      imageParent.appendChild(imageEl);
-      play("Wich league?", clubs[round]) // new round
-    } else {
-      console.log("spel is beeindigd")
-      // endGame(); // show score on screen
-    }
-  }, 3000)
-}
+  round++;
+  // show needed elements again:
+  imageParent.style.display = "";
+  imagesContainerEl.style.display = "";
+  // hide everything else:
+  selectContainerEl.setAttribute("hidden", true);
 
-// functie voor de feedback te tonen
-function showFeedback(type, leagueName) {
-  document.querySelector(".image-container").style.display = "none"; // hide image-container
-  feedbackEl.removeAttribute("hidden"); // show feedback-container
-  if (type === "success") {
-    feedbackEl.style.backgroundColor = "#30a56e";
-    feedbackEl.children[0].textContent = "Correct!";
-    feedbackEl.children[1].textContent = `${clubs[round].name} does play in ${leagueName}`;
-    endRound();
-  } else {
-    if (attempts <= 1) {
-      feedbackEl.style.backgroundColor = "#e54e4e";
-      feedbackEl.children[0].textContent = "Try again!";
-      feedbackEl.children[1].textContent = "";
-      attempts++;
-    } else {
-      feedbackEl.style.backgroundColor = "#e54e4e";
-      feedbackEl.children[0].textContent = "Wrong!";
-      feedbackEl.children[1].textContent = `${clubs[round].name} does play in ${leagueName}`;
-      endRound();
-    }
-  }
-}
+  imageParent.appendChild(imageEl);
+  club = clubs[Math.floor(Math.random() * clubs.length)]
 
-function play(question, club) {
-  attempts++;
   // als eerste de vraag met afbeelding tonen
-  questionEl.textContent = question
+  questionEl.textContent = "Which league?"
   imageEl.setAttribute("src", `data:image/jpeg;base64, ${club.image}`);
+  imageEl.setAttribute("draggable", true); // make image draggable
 
   // alle league elementen ophalen
   let leagueTxts = document.querySelectorAll(".league-text > p");
@@ -95,17 +54,121 @@ function play(question, club) {
   // tonen op scherm
   leagueTxts.forEach((leagueTxt, index) => {
     leagueTxt.textContent = shuffledNames[index].substring(0, shuffledNames[index].length - 3)
-  })  
+  }) 
+}
+
+// een eventListener plakken om te luisteren naar wanneer een image wordt gedropt
+document.querySelectorAll(".league-container").forEach((node) => {
+  node.addEventListener("drop", async(e) => {
+    console.log('image gedropt')
+    e.preventDefault();
+    let data = e.dataTransfer.getData("text");
+    e.target.appendChild(document.getElementById(data));
+
+    // antwoord checken 
+    let correctLeague = leagues.find((league) => league.id === club.league);
+    let leagueName = correctLeague.name.substring(0, correctLeague.name.length - 3); // remove numbering from API
+    let league = leagueName.replace(/\s+/g, ''); // remove spaces 
+    let received = e.target.nextElementSibling.children[0].innerText.replace(/\s+/g, ''); // remove spaces
+
+    if (league === received) {
+      await showFeedback("success", "Correct!", `${club.name} plays in ${leagueName}`, false, true);
+      bonusQuestion()
+    } else if (attempts < 1) {
+      attempts += 1
+      showFeedback("fail", "Try again!", "", true, false);
+    } else {
+      await showFeedback("fail", "Wrong!", `${club.name} plays in ${leagueName}`, false, true)
+      playGame()
+    }  
+  })
+})
+
+async function bonusQuestion() {
+  // Hide image & image-boxes & feedback after 2 seconds
+  imageParent.style.display = "none";
+  imagesContainerEl.style.display = "none";
+  // new question:
+  questionEl.textContent = `Select three clubs who also play in ${leagues.find((league) => league.id === club.league).name}`;
+  // Show SELECT 
+  selectContainerEl.removeAttribute("hidden");
+
+  // listening to form-submit
+  document.getElementById("clubs-form").addEventListener("submit", async(e) => {
+    e.preventDefault();
+
+    // retrieving selected values 
+    let selectEl = document.getElementById("clubs-select");
+    let selectedValues = Array.from(selectEl.selectedOptions).map(options => options.value) // array with names of selected clubs
+    // als er geen 3 zaken zijn geselecteerd tonen we error-message, anders gaan we verder
+    if (selectedValues.length !== 3) {
+      selectEl.classList.add("is-invalid")
+    } else {
+      selectEl.classList.remove("is-invalid")
+      
+      // nieuwe array met de club-objecten van de geselecteerde namen
+      let selectedClubs = selectedValues.map((name) => clubs.find((club) => club.name === name))
+      // volgende stap is valideren of de clubs juist zijn en feedback tonen:
+      let correctLeague = leagues.find((league) => league.id === club.league);
+      let incorrectAnswers = [];
+      selectedClubs.forEach((club) => {
+        if (club.league !== correctLeague) {
+          incorrectAnswers.push(club)
+        }
+      })
+
+      if (incorrectAnswers.length === 0) {
+        await showFeedback("success", "Awesome!", "", false, true);
+        playGame();
+      } else {
+        let text = "";
+        switch (incorrectAnswers.length) {
+          case 1:
+            text += `${incorrectAnswers[0].name} does not play in the same league`
+            break;
+          case 2:
+            text += `${incorrectAnswers[0].name} and ${incorrectAnswers[1].name} do not play in the same league`
+            break;
+          case 3:
+            text += "none of the selected clubs play in the same league"
+            break;
+          default:
+            break;
+        }
+        await showFeedback("fail", "Wrong!", text, false, true);
+        playGame();
+      }
+    }
+  })
 }
 
 
-/**
- * HET SPEL
- */
-// eerste keer wordt dit sowieso uitgevoerd 
-play("Wich league?", clubs[round])
 
-// als de button wordt geklikt
+// functie voor feedback te tonen (3 seconden)
+async function showFeedback(type, title, text, draggable, timed) {
+  imageParent.style.display = "none" // hide image-container
+  feedbackEl.removeAttribute("hidden"); // render feedback-container instead
+  
+  // show feedback
+  feedbackEl.style.backgroundColor = type === "success" ? "#30a56e" : "#e54e4e";
+  feedbackEl.children[0].textContent = title;
+  feedbackEl.children[1].textContent = text;
+  imageEl.setAttribute("draggable", draggable); // after correct answer or 2 wrong answers, not possible to drag again
+
+  // removing feedback after 3 seconds 
+  if (timed) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        feedbackEl.setAttribute("hidden", true);
+        imageParent.removeAttribute("hidden");
+        resolve("done")
+      }, 3000);
+    })
+  }
+}
+
+// STOP: als de stop button wordt geklikt
 document.getElementById("stopBtn").addEventListener("click", () => {
-  playing = false;
+  console.log("einde spel")
+  //hide everything and show score in the middle of screen 
 })
