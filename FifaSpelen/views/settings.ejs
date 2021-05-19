@@ -67,8 +67,18 @@
                     
                             <div class="az-slidecontainer-verlichting">
                                 <h4><strong>BRIGHTNESS</strong></h4>
-                                <input type="range" class="form-range custom-range" min="1" max="100" id="range-brightness">
+                                <input type="range" class="form-range custom-range" min="1" max="100" value="100" id="range-brightness" onchange="change(this)">
                             </div>
+                            
+                            <!--Controleert brightness van de pagina (probleem : is alleen voor eige pagina en niet het gehele project)-->
+                            <script>
+                                rangeInput = document.getElementById('range-brightness');
+                                container = document.getElementsByClassName('d-flex flex-column min-vh-100')[0];
+                                rangeInput.addEventListener("change",function(){
+                                container.style.filter = "brightness(" + rangeInput.value + "%)";
+                            });
+                            </script>
+                            <!---->
 
                             <div class="az-level-container">
                                 <div class="form-check">
