@@ -18,50 +18,6 @@ const client = new MongoClient(process.env.DB_CONNECT,{ useNewUrlParser: true, u
 // DATA
 const data = { clubs: [], leagues: [] };
 
-<<<<<<< HEAD
-=======
-// functie voor afbeeldingen (van clubs) op te halen
-const getImage = async(clubId) => {
-  try {
-    let response = await fetch(`https://futdb.app/api/clubs/${Math.random()*797}/image`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "image/png",
-        "X-AUTH-TOKEN": process.env.API_TOKEN,
-      },
-    });
-    let result = await response.arrayBuffer();
-    // omvormen naar base64 (enkel zo kunnen we afbeelding tonen)
-    let image = new Buffer(result).toString('base64');
-    return image;
-  } catch (error) {
-    console.log(error)
-  }
-};
-
-// functie voor eerste 20 clubs op te halen, deze worden opgeslagen in een array die wordt gestuurd naar de frontend
-const getClubs = async() => {
-  try {
-    // deze request zal 20 clubs terugsturen, zolang zal een speelbeurt duren
-    let response = await fetch("https://futdb.app/api/clubs", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "X-AUTH-TOKEN": process.env.API_TOKEN
-      },
-    });
-    let result = await response.json();
-    data.clubs = await Promise.all(result.items.map(async(club) => {
-      club.image = await getImage(club.id);
-      return club;
-    }));
-  } catch (error) {
-    console.log(error)
-  }
-} 
-getClubs()
-
->>>>>>> 267a79c00b20030728fbf8823ec190c2ca5fc6c6
 //functie voor alle leagues op te halen, die slaan we op in een array en sturen we naar de frontend 
 const getLeagues = async() => {
   let array = [];
