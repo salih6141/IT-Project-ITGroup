@@ -56,6 +56,36 @@ async function playGame() {
     leagueTxt.textContent = shuffledNames[index].substring(0, shuffledNames[index].length - 3)
   }) 
 }
+let correctLeague = leagues.find((league) => league.id === club.league);
+let correcteclubs = [];
+let allclubs = [];
+let allclubsmix = [];
+for (let i = 0; i < clubs.length; i++) {
+  if(correctLeague.id === clubs[i].league){
+      correcteclubs.push(clubs[i].name)
+  }
+}
+for (let i = 0; i < 3; i++) {
+  allclubs.push(correcteclubs[i]);
+}
+for (let i = 0; i < 3; i++) {
+  let selectLevel =Math.floor(Math.random() * clubs.length) + 1;
+  if(correctLeague.id !== clubs[selectLevel].league){
+      allclubs.push(clubs[selectLevel].name)
+  }
+}
+for(let i = 0; i < 6;i++){
+  let random = Math.floor(Math.random() * allclubs.length);
+  allclubsmix.push(allclubs[random]);
+  allclubs.splice(random,1);
+}
+console.log(correcteclubs)
+console.log(allclubsmix)
+// let juisteclubs = clubs.find((club) => club.league === correctLeague.id);
+//   for (let i = 0; i < 3; i++) {
+//     correcteclubs.push(juisteclubs[i])
+//   }
+// console.log(juisteclubs)
 
 // een eventListener plakken om te luisteren naar wanneer een image wordt gedropt
 document.querySelectorAll(".league-container").forEach((node) => {
@@ -109,7 +139,7 @@ async function bonusQuestion() {
       // nieuwe array met de club-objecten van de geselecteerde namen
       let selectedClubs = selectedValues.map((name) => clubs.find((club) => club.name === name))
       // volgende stap is valideren of de clubs juist zijn en feedback tonen:
-      let correctLeague = leagues.find((league) => league.id === club.league);
+      // let correctLeague = leagues.find((league) => league.id === club.league);
       let incorrectAnswers = [];
       selectedClubs.forEach((club) => {
         if (club.league !== correctLeague) {
@@ -117,7 +147,7 @@ async function bonusQuestion() {
         }
       })
 
-      if (incorrectAnswers.length === 0) {
+      if (incorrectAnswers.length === undefined) {
         await showFeedback("success", "Awesome!", "", false, true);
         playGame();
       } else {
