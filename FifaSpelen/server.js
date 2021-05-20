@@ -1,7 +1,7 @@
 const express = require ("express");
 const fetch = require("node-fetch");
 require("dotenv").config();
-const { MongoClient } = require('mongodb');
+// const { MongoClient } = require('mongodb');
 const app = express();
 const clubs = require("./clubs.json");
 // const alldata = require("./public/js/spel")
@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false})); 
 
-const client = new MongoClient(process.env.DB_CONNECT,{ useNewUrlParser: true, useUnifiedTopology: true } );
+// const client = new MongoClient(process.env.DB_CONNECT,{ useNewUrlParser: true, useUnifiedTopology: true } );
 
 // DATA
 const data = { clubs: [], leagues: [] ,allclubsmix: []};
