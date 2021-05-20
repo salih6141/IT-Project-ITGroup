@@ -166,7 +166,7 @@ input {
 .league-container {
   width: 18rem; 
   position: relative;
-  border: 1px solid rgb(221, 87, 87);
+  border: 2px solid white;
   border-radius: 25px;
   overflow: hidden;
   margin: 10px;
@@ -181,7 +181,7 @@ input {
   text-align: center;
 }
 .league-text > p {
-  background-color: rgb(221, 87, 87);
+  background-color: white;
   color: #212529;
   padding: 1rem;
   margin-bottom: 0;

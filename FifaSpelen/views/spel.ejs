@@ -78,9 +78,6 @@
       <form id="clubs-form" action="/spel" method="get">
         <fieldset>
           <select id="clubs-select" class="form-select form-select-lg mb-3" size="6" multiple>
-            <% clubs.forEach(club => { %>
-              <option value="<%= club.name %>"><%= club.name %></option>
-            <% }); %>
           </select>
           <div class="invalid-feedback">
             Please select three clubs
@@ -92,12 +89,6 @@
 
     <button id="stopBtn" type="button" class="btn btn-primary mt-5" style="width: 50%;">Stop playing</button>
   </main>
-
-  <!-- <footer class="footer az-footer spel-footer">
-      <div class="container">
-        <span class="az-footer-text">IT-Project &#124; Adil Ziani - Achraf Ahrirou - Salih Komut - Mamadou Barry &vert; <a class="az-footer-link" href="https://www.ap.be/privacy-en-cookieverklaring" target="_blank">Privacy & Cookieverklaring</a></span>
-      </div>
-  </footer> -->
 
   <script>
     let clubs = <%- clubsStringified %>;
