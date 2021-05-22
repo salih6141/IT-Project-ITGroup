@@ -208,3 +208,4 @@ document.getElementById("stopBtn").addEventListener("click", () => {
   console.log("einde spel")
   //hide everything and show score in the middle of screen
 })
+

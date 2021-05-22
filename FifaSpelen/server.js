@@ -6,7 +6,6 @@ const app = express();
 const clubs = require("./clubs.json");
 // const alldata = require("./public/js/spel")
 // const arrayclubs = alldata.allclubsmix;
-
 // middleware
 app.set("port", process.env.PORT || 8080);
 app.set("view engine", "ejs");
@@ -91,7 +90,9 @@ app.get("/spel", async(req, res) => {
   });
 })
 app.get("/score", async(req, res) => {
-  res.render("score");
+  res.render("score", {
+    score: score,
+  });
 })
 
 // Error handling 
