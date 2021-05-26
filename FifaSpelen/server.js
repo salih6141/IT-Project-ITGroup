@@ -90,9 +90,7 @@ app.get("/spel", async(req, res) => {
   });
 })
 app.get("/score", async(req, res) => {
-  res.render("score", {
-    score: score,
-  });
+  res.render("score");
 })
 
 // Error handling 
