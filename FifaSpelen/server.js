@@ -63,8 +63,7 @@ getLeagues().then((leagues) => {
   data.leagues = leagues;
 })
 
-
-/* Het renderen van de pagina's */
+/* Het renderen van de pagina's */ 
 app.get("/", async(req, res) => {
   res.render("index");
 });
