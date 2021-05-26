@@ -205,6 +205,7 @@ async function showFeedback(type, title, text, draggable, timed) {
 
 // STOP: als de stop button wordt geklikt
 document.getElementById("stopBtn").addEventListener("click", () => {
+  window.location.href = "./score"
   console.log("einde spel")
   //hide everything and show score in the middle of screen
 })
