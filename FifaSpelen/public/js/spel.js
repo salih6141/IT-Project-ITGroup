@@ -74,6 +74,8 @@ document.querySelectorAll(".league-container").forEach((node) => {
 
     if (league === received) {
       await showFeedback("success", "Correct!", `${club.name} plays in ${leagueName}`, false, true);
+      score += 2;
+      console.log(score)
       bonusQuestion(correctLeague)
     } else if (attempts < 1) {
       attempts += 1
@@ -151,24 +153,25 @@ async function bonusQuestion(correctLeague) {
         }
       })
       if (incorrectAnswers.length === 0) {
-        await showFeedback("success", "Awesome!", "", false, true);
+        await showFeedback("success", "Awesome! you just earned 3 points.", "", false, true);
+        score += 3;
+        console.log(score)
         playGame();
-      } else {
-        let text = "";
-        switch (incorrectAnswers.length) {
-          case 1:
-            text += `${incorrectAnswers[0].name} does not play in the same league`
-            break;
-          case 2:
-            text += `${incorrectAnswers[0].name} and ${incorrectAnswers[1].name} do not play in the same league`
-            break;
-          case 3:
-            text += "none of the selected clubs play in the same league"
-            break;
-          default:
-            break;
-        }
-        await showFeedback("fail", "Wrong!", text, false, true);
+      } 
+      else if (incorrectAnswers.length === 1) {
+        await showFeedback("success", `you get 2 points. ${incorrectAnswers[0].name} does not play in the ${correctLeague.name}.`, "", false, true);
+        score += 2;
+        console.log(score)
+        playGame();
+      }
+      else if (incorrectAnswers.length === 2) {
+        await showFeedback("success", `you get 1 point. ${incorrectAnswers[0].name} and ${incorrectAnswers[1].name} does not play in the ${correctLeague.name}`, "",false, true);
+        score +=1;
+        console.log(score)
+        playGame();
+      }
+      else {
+        await showFeedback("fail", `none of the selected clubs play in the ${correctLeague.name}`, false, true);
         playGame();
       }
     }
@@ -202,6 +205,8 @@ async function showFeedback(type, title, text, draggable, timed) {
 
 // STOP: als de stop button wordt geklikt
 document.getElementById("stopBtn").addEventListener("click", () => {
+  window.location.href = "./score"
   console.log("einde spel")
-  //hide everything and show score in the middle of screen 
+  //hide everything and show score in the middle of screen
 })
+

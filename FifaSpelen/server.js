@@ -1,26 +1,25 @@
 const express = require ("express");
 const fetch = require("node-fetch");
 require("dotenv").config();
-const { MongoClient } = require('mongodb');
+// const { MongoClient } = require('mongodb');
 const app = express();
 const clubs = require("./clubs.json");
 // const alldata = require("./public/js/spel")
 // const arrayclubs = alldata.allclubsmix;
-
 // middleware
 app.set("port", process.env.PORT || 8080);
 app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
-app.use(express.urlencoded({extended: false})); 
+app.use(express.urlencoded({extended: false}));
 
-const client = new MongoClient(process.env.DB_CONNECT,{ useNewUrlParser: true, useUnifiedTopology: true } );
+// const client = new MongoClient(process.env.DB_CONNECT,{ useNewUrlParser: true, useUnifiedTopology: true } );
 
 // DATA
 const data = { clubs: [], leagues: [] ,allclubsmix: []};
 
-//functie voor alle leagues op te halen, die slaan we op in een array en sturen we naar de frontend 
+//functie voor alle leagues op te halen, die slaan we op in een array en sturen we naar de frontend
 const getLeagues = async() => {
   let array = [];
   try {
@@ -52,7 +51,7 @@ const getLeagues = async() => {
       } catch (error) {
         console.log("er is een error")
         console.log(error)
-      } 
+      }
     }
     return array;
   } catch (error) {
@@ -84,6 +83,7 @@ app.get("/spel", async(req, res) => {
   console.log("aantal clubs gevonden: " + data.clubs.length)
   res.render("spel", {
     clubs: data.clubs,
+    score: data.score,
     leagues: JSON.stringify(data.leagues),
     clubsStringified: JSON.stringify(data.clubs),
   });
@@ -92,7 +92,7 @@ app.get("/score", async(req, res) => {
   res.render("score");
 })
 
-// Error handling 
+// Error handling
 app.use((req, res) => {
 	res.type("text/plain");
 	res.status(404);
