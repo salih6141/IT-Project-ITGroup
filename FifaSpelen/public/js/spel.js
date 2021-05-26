@@ -9,7 +9,7 @@ let imagesContainerEl = document.querySelector(".image-container-parent");
 let feedbackEl = document.querySelector(".spel-feedback-container");
 let selectContainerEl = document.querySelector(".club-select-container");
 let selectEl = document.getElementById("clubs-select");
-
+let scoretonen = document.getElementById("scorebord");
 let club = {}
 
 // functies om drag en drop toe te kunnen passen:
@@ -209,4 +209,4 @@ document.getElementById("stopBtn").addEventListener("click", () => {
   console.log("einde spel")
   //hide everything and show score in the middle of screen
 })
-
+scoretonen.textContent(score.toString());

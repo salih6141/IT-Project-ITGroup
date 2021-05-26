@@ -84,13 +84,12 @@ app.get("/spel", async(req, res) => {
   console.log("aantal clubs gevonden: " + data.clubs.length)
   res.render("spel", {
     clubs: data.clubs,
-    score: data.score,
     leagues: JSON.stringify(data.leagues),
     clubsStringified: JSON.stringify(data.clubs),
   });
 })
 app.get("/score", async(req, res) => {
-  res.render("score");
+  res.render("score")
 })
 
 // Error handling
