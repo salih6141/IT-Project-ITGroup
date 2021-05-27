@@ -191,7 +191,7 @@ async function showFeedback(type, title, text, draggable, timed) {
   feedbackEl.children[0].textContent = title;
   feedbackEl.children[1].textContent = text;
   imageEl.setAttribute("draggable", draggable); // after correct answer or 2 wrong answers, not possible to drag again
-
+  scoretonen.textContent(score.toString());
   // removing feedback after 3 seconds 
   if (timed) {
     return new Promise((resolve, reject) => {
@@ -206,6 +206,7 @@ async function showFeedback(type, title, text, draggable, timed) {
 
 // STOP: als de stop button wordt geklikt
 document.getElementById("stopBtn").addEventListener("click", () => {
+  console.log("einde spel")
   //hide everything and show score in the middle of screen
   console.log("einde spel")
   // document.getElementById("main-spel").setAttribute("hidden",true);
@@ -213,3 +214,4 @@ document.getElementById("stopBtn").addEventListener("click", () => {
   scoreEl.children[0].textContent = scoreString;
   scoreEl.removeAttribute("hidden");
 })
+

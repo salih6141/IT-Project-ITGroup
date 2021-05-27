@@ -4,21 +4,20 @@ require("dotenv").config();
 // const { MongoClient } = require('mongodb');
 const app = express();
 const clubs = require("./clubs.json");
-
 // middleware
 app.set("port", process.env.PORT || 8080);
 app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
-app.use(express.urlencoded({extended: false})); 
+app.use(express.urlencoded({extended: false}));
 
 // const client = new MongoClient(process.env.DB_CONNECT,{ useNewUrlParser: true, useUnifiedTopology: true } );
 
 // DATA
 const data = { clubs: [], leagues: [] ,allclubsmix: []};
 
-//functie voor alle leagues op te halen, die slaan we op in een array en sturen we naar de frontend 
+//functie voor alle leagues op te halen, die slaan we op in een array en sturen we naar de frontend
 const getLeagues = async() => {
   let array = [];
   try {
@@ -50,7 +49,7 @@ const getLeagues = async() => {
       } catch (error) {
         console.log("er is een error")
         console.log(error)
-      } 
+      }
     }
     return array;
   } catch (error) {
@@ -61,7 +60,6 @@ getLeagues().then((leagues) => {
   data.clubs = clubs;
   data.leagues = leagues;
 })
-
 
 /* Het renderen van de pagina's */ 
 app.get("/", async(req, res) => {
@@ -88,10 +86,10 @@ app.get("/spel", async(req, res) => {
   });
 })
 app.get("/score", async(req, res) => {
-  res.render("score");
+  res.render("score")
 })
 
-// Error handling 
+// Error handling
 app.use((req, res) => {
 	res.type("text/plain");
 	res.status(404);
