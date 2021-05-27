@@ -1,7 +1,10 @@
 let attempts = 0;
 let score = 0;
+let teHalenPunten = 0;
 let round = 0;
 
+// document.getElementById("Home").setAttribute("hidden",true);
+// document.getElementById("Retry").setAttribute("hidden",true);
 let questionEl = document.getElementById("question");
 let imageParent = document.getElementById("image-container");
 let imageEl = document.getElementById("club-image");
@@ -10,6 +13,7 @@ let feedbackEl = document.querySelector(".spel-feedback-container");
 let selectContainerEl = document.querySelector(".club-select-container");
 let selectEl = document.getElementById("clubs-select");
 let scoreEl = document.getElementById("score-container");
+
 
 let club = {}
 
@@ -76,6 +80,7 @@ document.querySelectorAll(".league-container").forEach((node) => {
     if (league === received) {
       await showFeedback("success", "Correct!", `${club.name} plays in ${leagueName}`, false, true);
       score += 2;
+      teHalenPunten += 2;
       console.log(score)
       bonusQuestion(correctLeague)
     } else if (attempts < 1) {
@@ -83,6 +88,7 @@ document.querySelectorAll(".league-container").forEach((node) => {
       showFeedback("fail", "Try again!", "", true, false);
     } else {
       await showFeedback("fail", "Wrong!", `${club.name} plays in ${leagueName}`, false, true)
+      teHalenPunten += 2;
       playGame()
     }  
   })
@@ -156,23 +162,27 @@ async function bonusQuestion(correctLeague) {
       if (incorrectAnswers.length === 0) {
         await showFeedback("success", "Awesome! you just earned 3 points.", "", false, true);
         score += 3;
+        teHalenPunten +=3;
         console.log(score)
         playGame();
       } 
       else if (incorrectAnswers.length === 1) {
         await showFeedback("success", `you get 2 points. ${incorrectAnswers[0].name} does not play in the ${correctLeague.name}.`, "", false, true);
         score += 2;
+        teHalenPunten += 3;
         console.log(score)
         playGame();
       }
       else if (incorrectAnswers.length === 2) {
         await showFeedback("success", `you get 1 point. ${incorrectAnswers[0].name} and ${incorrectAnswers[1].name} does not play in the ${correctLeague.name}`, "",false, true);
         score +=1;
+        teHalenPunten +=3;
         console.log(score)
         playGame();
       }
       else {
         await showFeedback("fail", `none of the selected clubs play in the ${correctLeague.name}`, false, true);
+        teHalenPunten +=3;
         playGame();
       }
     }
@@ -206,10 +216,27 @@ async function showFeedback(type, title, text, draggable, timed) {
 // STOP: als de stop button wordt geklikt
 document.getElementById("stopBtn").addEventListener("click", () => {
   //hide everything and show score in the middle of screen
+  document.getElementById("stopBtn").setAttribute("hidden",true);
+  questionEl.setAttribute("hidden",true);
+  imageParent.setAttribute("hidden",true);
+  imageEl.setAttribute("hidden",true);
+  imagesContainerEl.setAttribute("hidden",true);
+  feedbackEl.setAttribute("hidden",true);
+  selectContainerEl.setAttribute("hidden",true);
+  selectEl.setAttribute("hidden",true);
+  //na het verstoppen van het spel score weergeven
+  // let scoreString = score.toString();
+  // scoreEl.children[0].textContent = scoreString;
+  showFeedback('success',`U hebt ${score} punten gepakt. Uw score is ${score}/${teHalenPunten}`)
+  // scoreEl.removeAttribute("hidden");
+  // document.getElementById("Home").removeAttribute("hidden");
+  // document.getElementById("Retry").removeAttribute("hidden");
   console.log("einde spel")
-  // document.getElementById("main-spel").setAttribute("hidden",true);
-  let scoreString = score.toString();
-  scoreEl.children[0].textContent = scoreString;
-  scoreEl.removeAttribute("hidden");
+  //de score late tonen via js
 })
+
+// document.getElementById("Home").addEventListener("click", () =>{
+//   //herleiden naar home pagina
+//   window.location.href('./index')
+// })
 
