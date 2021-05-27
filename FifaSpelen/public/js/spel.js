@@ -9,6 +9,7 @@ let imagesContainerEl = document.querySelector(".image-container-parent");
 let feedbackEl = document.querySelector(".spel-feedback-container");
 let selectContainerEl = document.querySelector(".club-select-container");
 let selectEl = document.getElementById("clubs-select");
+let scoreEl = document.getElementById("score-container");
 
 let club = {}
 
@@ -205,6 +206,10 @@ async function showFeedback(type, title, text, draggable, timed) {
 
 // STOP: als de stop button wordt geklikt
 document.getElementById("stopBtn").addEventListener("click", () => {
-  console.log("einde spel")
   //hide everything and show score in the middle of screen
+  console.log("einde spel")
+  // document.getElementById("main-spel").setAttribute("hidden",true);
+  let scoreString = score.toString();
+  scoreEl.children[0].textContent = scoreString;
+  scoreEl.removeAttribute("hidden");
 })

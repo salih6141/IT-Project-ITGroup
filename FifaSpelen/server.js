@@ -4,8 +4,6 @@ require("dotenv").config();
 // const { MongoClient } = require('mongodb');
 const app = express();
 const clubs = require("./clubs.json");
-// const alldata = require("./public/js/spel")
-// const arrayclubs = alldata.allclubsmix;
 
 // middleware
 app.set("port", process.env.PORT || 8080);
@@ -85,7 +83,6 @@ app.get("/spel", async(req, res) => {
   console.log("aantal clubs gevonden: " + data.clubs.length)
   res.render("spel", {
     clubs: data.clubs,
-    score: data.score,
     leagues: JSON.stringify(data.leagues),
     clubsStringified: JSON.stringify(data.clubs),
   });
