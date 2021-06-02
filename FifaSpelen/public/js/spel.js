@@ -41,7 +41,7 @@ async function playGame() {
   club = clubs[Math.floor(Math.random() * clubs.length)]
 
   // als eerste de vraag met afbeelding tonen
-  questionEl.textContent = "In which league plays this club ?"
+  questionEl.textContent = "In which league does this club play?"
   imageEl.setAttribute("src", `data:image/jpeg;base64, ${club.image}`);
   imageEl.setAttribute("draggable", true); // make image draggable
 
@@ -227,7 +227,7 @@ document.getElementById("stopBtn").addEventListener("click", () => {
   //na het verstoppen van het spel score weergeven
   // let scoreString = score.toString();
   // scoreEl.children[0].textContent = scoreString;
-  showFeedback('success',`U hebt ${score} punten gepakt. Uw score is ${score}/${teHalenPunten}`)
+  showFeedback('success',`You have ${score} points. Your score is ${score}/${teHalenPunten}.`)
   // scoreEl.removeAttribute("hidden");
   // document.getElementById("Home").removeAttribute("hidden");
   // document.getElementById("Retry").removeAttribute("hidden");
