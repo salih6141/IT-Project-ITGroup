@@ -64,9 +64,6 @@ app.get("/", async(req, res) => {
 app.get("/about", async(req, res) => {
   res.render("about");
 })
-app.get("/settings", async(req, res) => {
-  res.render("settings");
-})
 app.get("/login", async(req, res) => {
   res.render("login");
 })
@@ -80,9 +77,6 @@ app.get("/spel", async(req, res) => {
     leagues: JSON.stringify(data.leagues),
     clubsStringified: JSON.stringify(data.clubs),
   });
-})
-app.get("/score", async(req, res) => {
-  res.render("score")
 })
 
 // Error handling
