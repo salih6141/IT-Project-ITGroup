@@ -3,8 +3,6 @@ let score = 0;
 let teHalenPunten = 0;
 let round = 0;
 
-// document.getElementById("Home").setAttribute("hidden",true);
-// document.getElementById("Retry").setAttribute("hidden",true);
 let questionEl = document.getElementById("question");
 let imageParent = document.getElementById("image-container");
 let imageEl = document.getElementById("club-image");
@@ -225,18 +223,7 @@ document.getElementById("stopBtn").addEventListener("click", () => {
   selectContainerEl.setAttribute("hidden",true);
   selectEl.setAttribute("hidden",true);
   //na het verstoppen van het spel score weergeven
-  // let scoreString = score.toString();
-  // scoreEl.children[0].textContent = scoreString;
   showFeedback('success',`You have ${score} points. Your score is ${score}/${teHalenPunten}.`)
-  // scoreEl.removeAttribute("hidden");
-  // document.getElementById("Home").removeAttribute("hidden");
-  // document.getElementById("Retry").removeAttribute("hidden");
   console.log("einde spel")
   //de score late tonen via js
 })
-
-// document.getElementById("Home").addEventListener("click", () =>{
-//   //herleiden naar home pagina
-//   window.location.href('./index')
-// })
-

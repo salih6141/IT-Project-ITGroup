@@ -1,18 +1,14 @@
 const express = require ("express");
 const fetch = require("node-fetch");
 require("dotenv").config();
-// const { MongoClient } = require('mongodb');
 const app = express();
 const clubs = require("./clubs.json");
-// middleware
 app.set("port", process.env.PORT || 8080);
 app.set("view engine", "ejs");
-
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-// const client = new MongoClient(process.env.DB_CONNECT,{ useNewUrlParser: true, useUnifiedTopology: true } );
 
 // DATA
 const data = { clubs: [], leagues: [] ,allclubsmix: []};
