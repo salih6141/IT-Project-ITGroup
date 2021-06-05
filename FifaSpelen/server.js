@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 require("dotenv").config();
 const app = express();
 const clubs = require("./clubs.json");
-app.set("port", process.env.PORT || 8080);
+app.set("port", process.env.PORT || 5000);
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
